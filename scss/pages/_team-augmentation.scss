@@ -1,0 +1,252 @@
+.team-aug-benefits {
+  .industries__container {
+    @include breakpoint("ipad-land") {
+      margin-top: 0;
+    }
+
+    .industries__info {
+      &:hover {
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: 1px;
+          width: 100%;
+          border-bottom: 6px solid $primary;
+        }
+      }
+    }
+  }
+}
+
+.team-aug-path {
+  span {
+    font-weight: 600;
+  }
+}
+
+.roi_driven_container {
+  background-color: $black2;
+  padding-top: 14rem;
+  padding-bottom: 4rem;
+
+  @include breakpoint("ipad-land") {
+    padding-top: 6rem;
+    padding-bottom: 0;
+  }
+
+  br {
+    @include breakpoint("ipad-land") {
+      display: none;
+    }
+  }
+}
+
+.mobilesliderteam {
+  display: none;
+
+  @include breakpoint("ipad-land") {
+    display: block;
+    background: url(../images/teamblockksection.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .philslidercontainer {
+      padding: 5rem;
+
+      .slick-dots {
+        text-align: center;
+        bottom: -3rem;
+      }
+    }
+
+    .slick-dotted.slick-slider {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.blocks-team-container {
+  background: url(../images/block-team.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include breakpoint("ipad-land") {
+    display: none;
+  }
+}
+
+.team_aug_block {
+  height: 60rem;
+
+  @include breakpoint("large") {
+    height: 70rem;
+  }
+
+  @include breakpoint("desktop") {
+    height: 60rem;
+  }
+
+  .team_aug_block_item.active {
+    padding-top: 5rem;
+  }
+
+  .blocks4-division-container__item {
+    padding: 10rem 12rem;
+
+    &.active {
+      padding: 10rem 12rem;
+      background: #00000075;
+
+      .team_aug_block_title {
+        font-size: 2.8rem;
+      }
+    }
+
+    .team_aug_block_title {
+      width: 100%;
+      text-align: left;
+
+      &:after {
+        height: 0;
+      }
+    }
+  }
+}
+
+.team-static-banner {
+  background: url(../images/footer-team.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50rem;
+  background-attachment: fixed;
+
+  .blogbanner__slidercontainer {
+    .banner__slideinfo {
+      padding-top: 0;
+    }
+  }
+}
+
+//service css start from here
+.team_aug_service_slider {
+  .whatwedo__inner {
+   
+    .slick-next,
+    .slick-prev {
+      top: 25rem;
+    }
+    .team-single-slide {
+      .slick-list {
+        height: auto !important;      
+        .slick-track{
+          height: auto !important;
+          display: flex;
+        }
+      }
+
+    }
+  }
+ 
+  .whatwedo__item {
+    padding: 0rem 0.8rem;
+    border-left: 0.1rem solid $gray-6;
+    border-top: 0.1rem solid $gray-6;
+    height: 100%;
+    position: relative;
+    // border-right: 0.1rem solid $gray-6;
+    @include breakpoint("ipad") {
+      margin-top: 1rem;
+    }
+    .team-logo-row {
+      position: relative;
+      background-color: $black2;
+      &::before {
+        border-top: 0.1rem solid $gray-6;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: -2px;
+        width: 100%;
+        height: 1px;
+        z-index: 1;
+      }
+
+      .team_service_logos {
+        padding: 4rem 2rem;
+        &::after {
+          border-right: 0.1rem solid $gray-6;
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 1px;
+          height: 100%;
+        }
+        // @include breakpoint("mobile") {
+        //   padding: 2rem;
+        // }
+        //  @include breakpoint("ipad") {
+        //   padding: 4rem 2rem;
+        //  }
+      }
+    }
+  }
+  .slider-single{
+    .slick-dots{
+        display: none !important;
+    }
+  } 
+}
+
+
+//for tabs mobile
+
+.team_aug_service_slider{
+  .whatwedo__inner{
+    .slider-nav{
+      @include breakpoint("ipad") {
+        display: block;
+        .slick-track{
+          display: flex;
+          overflow: auto;
+           margin-left: 0;
+              &::-webkit-scrollbar {
+            display: none;
+          }
+          .slick-slide{
+           width: max-content !important; 
+           margin-bottom: 2rem;
+           border: 1px solid #a2a2a2;
+            border-radius: 5rem;
+           color: $white;
+          background-color: transparent;
+           cursor: pointer;
+           padding: 0.8rem 3rem;
+          margin-right: 0.8rem;
+           &::before{
+              content: unset;
+           }
+
+           .whatwedo__title{
+               width: max-content !important;
+           }
+          }
+          .slick-slide.is-active{
+            background-color: $white;
+            color: $black;
+            border-color: transparent;
+            .whatwedo__title span{
+              color: $black;
+            }
+           }
+        }
+      }
+     
+      
+    }
+  }
+  
+}

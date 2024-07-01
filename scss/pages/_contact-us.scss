@@ -1,0 +1,1428 @@
+.contactus {
+  padding: 15rem 0 9rem 0;
+
+  @include breakpoint("desktop") {
+    padding: 15rem 0 7.8rem 0;
+  }
+
+  @include breakpoint("large") {
+    padding: 18rem 0 11rem 0;
+  }
+
+  @include breakpoint("ipad-land") {
+    padding: 10rem 0 5rem 0;
+  }
+
+  &__title {
+    margin-bottom: 2.6rem;
+    font-size: 5rem;
+    line-height: normal;
+
+    @include breakpoint("desktop") {
+      margin-bottom: 1.5rem;
+    }
+
+    @include breakpoint("large") {
+      font-size: 6rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @include breakpoint("desktop") {
+      margin-bottom: 1.5rem;
+    }
+
+    @include breakpoint("desktop-large") {
+      font-size: 4.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    @include breakpoint("ipad-land") {
+      font-size: 3rem;
+      padding: 0rem 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    @include breakpoint("small") {
+      // font-size: 2.3rem;
+    }
+  }
+
+  &__para {
+    color: $white;
+
+    width: 84%;
+
+    @include breakpoint("desktop") {
+      width: 86%;
+    }
+
+    @include breakpoint("large") {
+      width: 82%;
+    }
+
+    @include breakpoint("ipad-land") {
+      padding: 0 1rem;
+      width: unset;
+    }
+  }
+
+  .wpcf7 form {
+    .wpcf7-response-output {
+      color: $gray-8;
+      border: 0;
+      padding: 0;
+    }
+  }
+
+  &__form {
+    margin-top: 8rem;
+    padding: 0 10rem 0 10.5rem;
+
+    @include breakpoint("ipad-land") {
+      padding: 0 1rem;
+      margin-top: 2rem;
+    }
+  }
+
+  &__inputs {
+    margin-bottom: 5rem;
+
+    @include breakpoint("ipad-land") {
+      margin-bottom: 3rem;
+    }
+
+    .wpcf7-not-valid-tip {
+      padding-left: 30px;
+
+      @include breakpoint("desktop") {
+        padding-left: 2rem;
+      }
+
+      @include breakpoint("large") {
+        padding-left: 3rem;
+      }
+
+      @include breakpoint("ipad-land") {
+        padding-left: 0;
+      }
+    }
+
+    // .wpcf7-response-output{
+    //   padding: 15px;
+    // }
+    .customcheckbox {
+      margin-bottom: 1rem;
+
+      input {
+        border: 0.1rem solid $border-color;
+        border-radius: 0;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0 0 0 2.5rem;
+        margin-top: 0;
+
+        @include breakpoint("ipad") {
+          padding: 0 0 0 1.5rem;
+        }
+
+        &:focus {
+          padding: 0 0 0 2.5rem;
+
+          @include breakpoint("ipad") {
+            padding: 0 0 0 1.5rem;
+          }
+        }
+
+        &:checked {
+          background-color: $primary;
+          border-color: $primary;
+        }
+
+        @include breakpoint("ipad") {
+          width: 1.8rem;
+          height: 1.8rem;
+        }
+      }
+
+      label {
+        font-size: 1.5rem;
+        // padding-left: 2.2rem;
+
+        @include breakpoint("large") {
+          font-size: 2rem;
+        }
+
+        a {
+          color: $gray-8;
+        }
+      }
+    }
+
+    .wpcf7-not-valid-tip {
+      @include breakpoint("large") {
+        padding-left: 3rem;
+      }
+
+      @include breakpoint("ipad-land") {
+        padding-left: 0;
+      }
+    }
+
+    label {
+      margin-bottom: 0;
+      color: $gray-15;
+      font-size: 1.8rem;
+      // padding-left: 3rem;
+
+      @include breakpoint("desktop") {
+        // padding-left: 2rem;
+        font-size: 1.6rem;
+      }
+
+      @include breakpoint("large") {
+        font-size: 2.2rem;
+        // padding-left: 3rem;
+      }
+
+      @include breakpoint("ipad-land") {
+        padding-left: 0;
+      }
+    }
+
+    .submit-btn-outer {
+      input {
+        border-bottom: 0;
+        background-color: $primary;
+        color: $white;
+        transition: all 0.25s ease-in-out;
+
+        &:focus {
+          border: 0;
+          background-color: $primary;
+          color: $white;
+        }
+
+        &::before {
+          content: "";
+          width: 0;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          transition: all 0.25s ease-in-out;
+        }
+
+        &:hover {
+          color: $white;
+          background-color: $red-2;
+
+          &::before {
+            width: 100%;
+            transition: all 0.25s ease-in-out;
+          }
+        }
+      }
+    }
+
+    input {
+      background-color: transparent;
+      border-bottom: 0.1rem solid $border-color;
+
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      padding: 0;
+      color: $gray-15;
+      border-radius: 0;
+      font-size: 1.9rem;
+
+      @include breakpoint("desktop") {
+        font-size: 1.6rem;
+      }
+
+      @include breakpoint("large") {
+        font-size: 2.2rem;
+      }
+
+      &:focus {
+        background-color: transparent;
+        // padding-left: 3rem;
+        color: $gray-15;
+      }
+    }
+
+    .form-control:focus {
+      box-shadow: none;
+      border-bottom: 0.1rem solid $primary;
+      border-color: $primary  !important;
+    }
+
+    @include breakpoint("large") {
+      margin-bottom: 7rem;
+    }
+
+    .contactform__submitbtn {
+      padding: 1.4rem 2rem;
+
+      @include breakpoint("desktop") {
+        padding: 1.1rem 2rem;
+      }
+
+      @include breakpoint("large") {
+        padding: 1.4rem 2rem;
+      }
+
+      input {
+        border: 0;
+        color: $white;
+        z-index: 1;
+        padding: 0;
+      }
+    }
+  }
+
+  .direct-email {
+    color: #a6a7aa;
+
+    a {
+      color: $primary;
+    }
+  }
+
+  &__checkbox {
+    .wpcf7-list-item {
+      margin: unset;
+
+      // display: flex;
+      // align-items: center;
+      label {
+        display: flex;
+        align-items: center;
+        padding-left: 0;
+      }
+
+      input {
+        margin-top: unset;
+        border: 0.1rem solid $border-color;
+        border-radius: 0;
+        width: 1.8rem;
+        height: 1.8rem;
+        margin-right: 1rem;
+        padding: 0.9rem;
+
+        @include breakpoint("large") {
+          width: 2.5rem;
+          height: 2.5rem;
+          margin-right: 1.5rem;
+          padding: 0;
+        }
+      }
+
+      input:checked {
+        background-color: #ed1819;
+        border-color: #ed1819;
+      }
+    }
+
+    .wpcf7-list-item-label {
+      padding-left: 0;
+      font-size: 1.6rem;
+      // padding-top: 0.5rem;
+      color: $gray-15;
+      width: calc(100% - 2.5rem);
+
+      @include breakpoint("desktop") {
+        font-size: 1.4rem;
+        // padding-top: 0.5rem;
+      }
+
+      @include breakpoint("large") {
+        padding-left: 0;
+        font-size: 2rem;
+        // padding-top: 0.5rem;
+      }
+    }
+  }
+
+  &__select {
+    height: 5.8rem;
+    margin-top: -9px;
+
+    @include breakpoint("desktop") {
+      height: 5rem;
+      margin-top: -3px;
+    }
+
+    @include breakpoint("desktopsmall1050") {}
+
+    @include breakpoint("large") {
+      margin-top: -12px;
+      height: 6.7rem;
+    }
+
+    @include breakpoint("ipad-land") {
+      margin-top: -5px;
+    }
+
+    .select-hidden {
+      display: none;
+      visibility: hidden;
+      padding-right: 0.1rem;
+    }
+
+    .select {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      color: $gray-15;
+      width: 100%;
+      height: 100%;
+      border-bottom: 0.1rem solid $border-color;
+      font-size: 1.8rem;
+
+      @include breakpoint("desktop") {
+        font-size: 1.6rem;
+      }
+
+      @include breakpoint("large") {
+        font-size: 2.2rem;
+      }
+    }
+
+    .select-styled {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      padding: 0.9rem 0rem;
+
+      @include breakpoint("desktop") {
+        padding: 0rem 0rem;
+      }
+
+      @include breakpoint("large") {
+        padding: 0.8rem 0rem;
+      }
+
+      @include breakpoint("ipad-land") {
+        padding: 0;
+      }
+
+      &:after {
+        content: "\e923";
+        color: $gray-8;
+        width: 0;
+        height: 0;
+        font-weight: 700;
+        position: absolute;
+        font-family: "icomoon";
+        transform: rotate(-90deg);
+        top: 2.8rem;
+        right: 3.9rem;
+
+        @include breakpoint("desktop") {
+          top: 1.2rem;
+        }
+
+        @include breakpoint("ipad-land") {
+          top: 1.5rem;
+        }
+
+        @include breakpoint("large") {
+          top: 3.2rem;
+        }
+      }
+    }
+
+    .select-options {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      z-index: 1;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background-color: $black;
+      border-left: 0.1rem solid $border-color;
+      border-right: 0.1rem solid $border-color;
+      border-bottom: 0.1rem solid $border-color;
+      border-top: 0.1rem solid $primary;
+      height: 30rem;
+      overflow-y: scroll;
+
+      li {
+        margin: 0;
+        text-indent: 1.5rem;
+        padding: 1rem 0;
+
+        @include breakpoint("large") {
+          padding: 1.2rem 0;
+        }
+
+        &:hover,
+        &.is-selected {
+          color: $white;
+          background: $primary;
+        }
+
+        &[rel="hide"] {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.wpcf7-response-output {
+  color: #a6a7aa;
+}
+
+.worldwideoffice {
+  background-image: url("../images/contct-us-img_bg.png");
+  background-size: cover;
+  padding: 15rem 0 10rem 0;
+  background-attachment: fixed;
+
+  @include breakpoint("desktop") {
+    padding: 15rem 0 10rem 0;
+  }
+
+  @include breakpoint("ipad-land") {
+    padding: 5rem 0 8rem 0;
+    background-image: url("../images/contact-responsive.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  @include breakpoint("large") {
+    padding: 21.1rem 0 15.7rem 0;
+  }
+
+  &__title {
+    color: $black;
+    margin-bottom: 0.8rem;
+    font-size: 4.5rem;
+
+    @include breakpoint("desktop") {
+      margin-bottom: 1rem;
+    }
+
+    @include breakpoint("large") {
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint("ipad-land") {
+      font-size: 4.5rem;
+      padding: 0 1rem;
+    }
+
+    @include breakpoint("ipad") {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+
+    // @include breakpoint("small") {
+    //   font-size: 2rem;
+    // }
+  }
+
+  &__wordwidetext {
+    display: flex;
+    justify-content: end;
+
+    @include breakpoint("ipad-land") {
+      display: flex;
+      justify-content: start;
+      padding: 0 1rem;
+      margin-top: 1rem;
+    }
+
+    @include breakpoint("ipad") {
+      display: flex;
+      justify-content: start;
+      padding: 0 1rem;
+      margin-top: 5rem;
+    }
+  }
+
+  &__para {
+    color: $black;
+    font-size: 1.9rem;
+    width: 32%;
+    margin-left: 4.3rem;
+
+    br {
+      @include breakpoint("mobile") {
+        display: none;
+      }
+    }
+
+    @include breakpoint("desktop") {
+      font-size: 1.7rem;
+      width: 32%;
+      margin-left: 1rem;
+      margin-top: 1.3rem;
+      line-height: 1.2;
+    }
+
+    @include breakpoint("large") {
+      font-size: 2.4rem;
+      width: 35%;
+      margin-left: 4rem;
+      margin-top: 1.9rem;
+    }
+
+    @include breakpoint("ipad-land") {
+      font-size: 2rem;
+      width: 100%;
+      margin-left: 3rem;
+      line-height: 1.5;
+    }
+
+    @include breakpoint("ipad") {
+      font-size: 2rem;
+    }
+  }
+
+  &__locationtitle {
+    color: $black;
+    margin-bottom: 0.2rem;
+    font-size: 9rem;
+
+    @include breakpoint("desktop") {
+      margin-bottom: 0.4rem;
+      font-size: 8.5rem;
+    }
+
+    @include breakpoint("large") {
+      margin-bottom: 0.1rem;
+      font-size: 11.7rem;
+    }
+  }
+
+  &__maparea {
+    margin-top: 8rem;
+
+    @include breakpoint("desktop") {
+      margin-top: 7rem;
+    }
+
+    @include breakpoint("large") {
+      margin-top: 10rem;
+    }
+
+    @include breakpoint("ipad-land") {
+      display: none;
+    }
+
+    .nav-tabs {
+      margin-bottom: 3rem;
+
+      @include breakpoint("desktop") {
+        margin-bottom: 3rem;
+      }
+
+      // @include breakpoint ('ipad-land') {
+      //     display: none;
+      // }
+
+      @include breakpoint("large") {
+        margin-bottom: 4rem;
+      }
+
+      .nav-item {
+        position: relative;
+
+        .nav-link {
+          border: 0.1rem solid $black;
+          color: $black;
+          padding: 1.2rem 3rem;
+          font-size: 1.8rem;
+
+          @include breakpoint("desktop") {
+            padding: 1.1rem 3rem;
+            font-size: 1.6rem;
+          }
+
+          @include breakpoint("large") {
+            padding: 1.6rem 5.5rem;
+            font-size: 2rem;
+          }
+        }
+
+        .active {
+          background-color: $primary;
+          color: $white;
+          border: 0;
+
+          &::after {
+            content: "";
+            width: 1rem;
+            height: 1rem;
+            position: absolute;
+            bottom: -1.1rem;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            border-top: solid 2rem $primary;
+            border-left: solid 1.5rem transparent;
+            border-right: solid 1.5rem transparent;
+          }
+        }
+      }
+    }
+
+    // .card-header {
+    //     display: none;
+
+    //     @include breakpoint ('ipad-land') {
+    //         display: block;
+    //     }
+    // }
+
+    // .card {
+    //     background-color: transparent;
+    //     border: 0;
+
+    //     .collapse {
+    //         display: block;
+
+    //     }
+    // }
+
+    // @include breakpoint ('ipad-land') {
+    //     .tab-content {
+    //         .tab-pane {
+    //             display: block;
+    //             opacity: 1;
+    //             margin-bottom: 10px;
+    //         }
+    //     }
+
+    //     .card {
+    //         .collapse {
+    //             display: block;
+
+    //         }
+
+    //         .collapse:not(.show) {
+    //             display: none;
+    //         }
+    //     }
+
+    //     .card-header {
+    //         border-bottom: 1px solid $grey-border;
+    //         padding: 2rem 0;
+    //         background-color: transparent;
+
+    //         h5 {
+    //             a {
+    //                 display: block;
+    //                 text-decoration: none;
+    //                 color: $black;
+    //                 font-weight: 500;
+
+    //                 // &.collapsed {
+    //                 //     border: 0;
+
+    //                 //     &::after {
+    //                 //         content: "+";
+    //                 //     }
+
+    //                 //     &::before {
+    //                 //         background: $grey-border;
+    //                 //     }
+    //                 // }
+
+    //                 // &::before {
+    //                 //     content: "";
+    //                 //     width: 100%;
+    //                 //     height: 1px;
+    //                 //     background: $primary;
+    //                 //     position: absolute;
+    //                 //     bottom: 0;
+    //                 //     left: 0;
+    //                 // }
+
+    //                 &::after {
+    //                     // content: url(../images/plus.png);
+    //                     content: "+";
+    //                     position: absolute;
+    //                     top: 1.75rem;
+    //                     right: 0;
+    //                     width: 1rem;
+    //                     height: 2.3rem;
+    //                     font-size: 2rem;
+    //                 }
+
+    //                 &:not(.collapsed)::after {
+    //                     // content: url(../images/minus.png);
+    //                     content: "-";
+    //                     background-image: none;
+    //                     transform: unset;
+    //                 }
+
+    //                 &:not(.collapsed) {
+    //                     border: 0;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+  }
+
+  &__tabs {
+    margin-bottom: 9.1rem;
+
+    @include breakpoint("desktop") {
+      margin-bottom: 6.4rem;
+    }
+
+    @include breakpoint("large") {
+      margin-bottom: 9rem;
+    }
+  }
+
+  &__offices {
+    color: $black;
+    padding-bottom: 2rem;
+    font-size: 2.5rem;
+
+    @include breakpoint("desktop") {
+      font-size: 2.5rem;
+
+      padding-bottom: 1.2rem;
+    }
+
+    @include breakpoint("large") {
+      padding-bottom: 3rem;
+      font-size: 3.3rem;
+    }
+  }
+
+  &__explore {
+    color: $black;
+
+    @include breakpoint("ipad-land") {
+      padding: 0 1rem;
+      font-size: 2.4rem;
+      width: 87%;
+      line-height: 3rem;
+    }
+
+    @include breakpoint("ipad") {
+      width: 100%;
+      font-size: 2rem;
+    }
+
+    // @include breakpoint("small") {
+    //   width: 100%;
+    // }
+  }
+
+  &__mb-60 {
+    margin-bottom: 4rem;
+
+    // @include breakpoint("desktop") {
+    //   margin-bottom: 4rem;
+    // }
+
+    // @include breakpoint("large") {
+    //   margin-bottom: 4rem;
+    // }
+  }
+
+  &__officeadress {
+    h3 {
+      color: $black;
+      font-size: 2rem;
+      margin-bottom: 2.3rem;
+      line-height: 2.8rem;
+      margin-top: 0;
+
+      @include breakpoint("large") {
+        font-size: 2.4rem;
+        line-height: 3.5rem;
+        margin-bottom: 3rem;
+      }
+
+      @include breakpoint("ipad-land") {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        line-height: 2.4rem;
+      }
+    }
+
+    height: 27rem;
+
+    @include breakpoint("large") {
+      padding: 2.5rem;
+      height: 33rem;
+    }
+
+    @include breakpoint("desktop") {
+      padding: 3.9rem;
+      height: 27rem;
+    }
+
+    p {
+      color: $black;
+      margin-bottom: 0;
+
+      @include breakpoint("large") {
+        line-height: 3rem;
+      }
+    }
+
+    h4 {
+      color: $black;
+      font-weight: 700;
+    }
+
+    &--bgdanger {
+      background-color: $primary;
+
+      h4 {
+        color: $white;
+      }
+    }
+
+    padding: 3.5rem;
+
+    @include breakpoint("desktop") {
+      padding: 2.5rem;
+    }
+
+    @include breakpoint("large") {
+      padding: 3.9rem;
+    }
+  }
+
+  &__adrees {
+    // margin-top: 3.3rem;
+    // padding-bottom: 3rem;
+
+    // @include breakpoint("desktop") {
+    //   margin-top: 2.3rem;
+    //   padding-bottom: 2.1rem;
+    // }
+
+    // @include breakpoint("large") {
+    //   margin-top: 3.3rem;
+    //   padding-bottom: 3rem;
+    // }
+    li:first-child:last-child {
+      display: none;
+    }
+  }
+
+  &__quickconncet {
+    p {
+      color: $white;
+      margin-bottom: 3rem;
+
+      @include breakpoint("desktop") {
+        margin-bottom: 2.1rem;
+      }
+
+      @include breakpoint("large") {
+        margin-bottom: 3rem;
+      }
+
+      .icon-Path-220 {
+        font-size: 2.2rem;
+        margin-right: 1.2rem;
+
+        @include breakpoint("desktop") {
+          margin-right: 0.8rem;
+        }
+
+        @include breakpoint("large") {
+          font-size: 2.2rem;
+          margin-right: 1.2rem;
+        }
+      }
+
+      .icon-Group-58168 {
+        font-size: 1.9rem;
+
+        @include breakpoint("desktop") {
+          font-size: 1.1rem;
+        }
+
+        // margin-right: 0.8rem;
+
+        @include breakpoint("large") {
+          font-size: 1.9rem;
+          // margin-right: 2.2rem;
+        }
+      }
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+
+      .icon-Group-58168 {
+        font-size: 1.9rem;
+        margin-right: 0.9rem;
+
+        @include breakpoint("desktop") {
+          font-size: 1.1rem;
+          margin-right: 0.8rem;
+        }
+
+        @include breakpoint("large") {
+          font-size: 1.9rem;
+          margin-right: 0.9rem;
+        }
+      }
+    }
+
+    margin-top: 3.3rem;
+
+    @include breakpoint("desktop") {
+      margin-top: 2.3rem;
+    }
+
+    @include breakpoint("large") {
+      margin-top: 3.3rem;
+    }
+  }
+
+  &__addressmobile {
+    display: none;
+    margin: 3rem 0;
+    padding: 0 2rem;
+
+    @include breakpoint("desktop") {
+      margin: 10rem 0;
+      padding: 0 2rem;
+    }
+
+    @include breakpoint("ipad-land") {
+      display: block;
+      margin: 3rem 0;
+    }
+
+    .slick-track {
+      display: flex;
+      // margin-left: 0;
+    }
+
+    .slick-slide {
+      float: none;
+      height: 100%;
+    }
+
+    .accordion-item {
+      background-color: transparent;
+      border: 0;
+
+      .collapse {
+        &.show {
+          border-bottom: 0.1rem solid $primary;
+        }
+      }
+    }
+
+    h4 {
+      a {
+        text-decoration: none;
+        background: transparent;
+        color: $black;
+        font-weight: 500;
+        padding: 2.2rem 0;
+        position: relative;
+
+        &:not(.collapsed) {
+          color: $black;
+          background-color: transparent;
+          box-shadow: none;
+        }
+
+        &::before {
+          content: "";
+          width: 100%;
+          height: 0.1rem;
+          background: transparent;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+
+        &.collapsed::before {
+          content: "";
+          width: 100%;
+          height: 0.1rem;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          background: $gray-13;
+        }
+
+        &::after {
+          content: "+";
+          flex-shrink: 0;
+          width: 1.25rem;
+          height: 1.25rem;
+          margin-left: auto;
+          background-image: none;
+          transition: transform 0.2s ease-in-out;
+        }
+
+        &:not(.collapsed)::after {
+          content: "-";
+          flex-shrink: 0;
+          width: 1.25rem;
+          height: 1.25rem;
+          margin-left: auto;
+          background-image: none;
+          transition: transform 0.2s ease-in-out;
+          transform: none;
+        }
+      }
+    }
+  }
+
+  &__officebody {
+    padding: 0;
+    background-color: $white;
+
+    @include breakpoint("ipad-land") {
+      padding: 5rem;
+      margin-top: 1rem;
+    }
+
+    @include breakpoint("mobile") {
+      padding: 5rem;
+      margin-top: 1rem;
+    }
+
+    h4 {
+      border: 0;
+
+      @include breakpoint("ipad-land") {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      @include breakpoint("ipad-land") {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__sliderpoffice {
+    padding: 0;
+
+    .slick-dots {
+      position: relative;
+      margin-top: 2rem;
+
+      li {
+        button:before {
+          content: "";
+          display: none;
+        }
+      }
+
+      li:first-child:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+.select2-container {
+  width: 100% !important;
+  position: relative;
+  z-index: 0;
+}
+
+.servicesform {
+  @include breakpoint("ipad") {
+    margin-bottom: 2rem !important;
+  }
+
+  label {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: "\e923";
+      color: $gray-8;
+      width: 0;
+      height: 0;
+      font-weight: 700;
+      position: absolute;
+      font-family: "icomoon";
+      transform: rotate(-90deg);
+      right: 4.1rem;
+      bottom: 5px;
+    }
+  }
+
+  select {
+    margin-bottom: 2rem !important;
+  }
+}
+
+.location__maparea.worldwideoffice__maparea {
+  .nav-tabs {
+    flex-wrap: wrap;
+    // justify-content: space-between;
+
+    .nav-item {
+      margin-bottom: 1.5rem;
+      // padding-right: 1.5rem;
+      margin-left: 0;
+      margin-right: 3rem;
+
+      @include breakpoint("large") {
+        // padding-right: 2.5rem;
+        margin-right: 1.9rem;
+      }
+
+      @include breakpoint("desktop") {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+.select2-dropdown {
+  // margin-top: 3rem !important;
+}
+
+.select2-container .select2-selection--multiple {
+  @include breakpoint("desktop") {
+    min-height: auto !important;
+  }
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+  border-bottom: 0.1rem solid $border-color;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+
+  &:focus {
+    border-bottom: 0.1rem solid $primary  !important;
+  }
+
+  // padding: 0 0 0 3rem !important;
+
+  // @include breakpoint("desktop") {
+  //   padding: 0 0 0 2rem !important;
+  // }
+
+  // @include breakpoint("large") {
+  //   padding: 0 0 0 3rem !important;
+  // }
+
+  // @include breakpoint("ipad-land") {
+  //   padding-left: 0 !important;
+  // }
+}
+
+.select2-container--default {
+  .select2-selection--multiple {
+    background-color: transparent !important;
+    // border-bottom: 0.1rem solid $border-color  !important;
+    // border-top: 0 !important;
+    // border-right: 0 !important;
+    // border-left: 0 !important;
+    // border-radius: 0 !important;
+    border: 0 !important;
+
+    // &:focus {
+    //   border-bottom: 0.1rem solid $primary  !important;
+    // }
+
+    .select2-selection__clear {
+      font-weight: normal !important;
+      margin: 0 !important;
+      font-size: 3rem;
+      color: $gray-8;
+
+      @include breakpoint("desktop") {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+.select2-results__option {
+  padding-right: 2rem !important;
+  vertical-align: middle !important;
+}
+
+.select2-dropdown {
+  background-color: $black  !important;
+  color: $white;
+}
+
+.select2-results__option:before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid $border-color;
+  // border-radius: 0.4rem;
+  background-color: $black;
+  margin-right: 2rem;
+  vertical-align: middle;
+}
+
+.select2-results__option[aria-selected="true"]:before {
+  content: " ";
+  background: url("../images/tick-mark.svg") no-repeat;
+  background-size: contain;
+  color: $white;
+  background-color: $white;
+  border: 0;
+  display: inline-block;
+  padding-left: 0.3rem;
+}
+
+#select2-country-results {
+  .select2-results__message.select2-results__option {
+    &::before {
+      content: none !important;
+    }
+  }
+}
+
+.select2-container--default .select2-results__option[aria-selected="true"] {
+  background-color: transparent !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: $primary  !important;
+  color: $white  !important;
+}
+
+.select2-container--default .select2-selection--multiple {
+  margin-bottom: 1rem !important;
+}
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+  border-radius: 0 !important;
+}
+
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  border-color: $primary;
+  border-width: 0.1rem;
+}
+
+.select2-container--default .select2-selection--multiple {
+  border: 0;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+  @include breakpoint("desktop") {
+    margin: -0.6rem 0 0 0 !important;
+  }
+
+  @include breakpoint("ipad-land") {
+    margin: -0.5rem 0 0 0 !important;
+  }
+}
+
+.select2-container--open .select2-dropdown--below {
+  border-radius: 0.6rem !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+}
+
+.select2-container--default .select2-selection--multiple {
+  border: 0;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+  margin: 0.5rem;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__clear {
+  display: none;
+}
+
+/* select with icons badges single*/
+// .select-icon .select2-selection__placeholder .badge {
+//   display: none !important;
+// }
+
+// .select-icon .select2-results__option:before,
+// .select-icon .select2-results__option[aria-selected=true]:before {
+//   display: none !important;
+//   /* content: "" !important; */
+// }
+
+// .select-icon .select2-search--dropdown {
+//   display: none !important;
+// }
+.select2-results__option[aria-selected="true"]:before {
+  content: " ";
+  background-size: 1.2rem;
+  background-position: center;
+}
+
+// css for scrollbar
+.select2-container--default .select2-selection--multiple .select2-selection__rendered {
+  display: flex !important;
+  overflow: auto !important;
+  // margin-top: 0.1rem !important;
+  padding: 0 !important;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    cursor: pointer;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 30px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: $border-color;
+    border-radius: 30px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: $primary;
+  }
+}
+
+// }
+
+.servicesform {
+  br {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
+}
+
+#clickme2 {
+  display: none;
+}
+
+.wpcf7-form-control-wrap.recaptcha {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}

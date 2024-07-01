@@ -1,0 +1,62 @@
+.logo-technology{
+    .logo_row{
+        background: $black2;
+        padding: 1rem 0;
+        text-align: center;
+
+     .image_col{
+        border-right: 1px solid $border-color3;
+        padding: 3rem 0;
+
+        &:last-child{
+            border-right: none;
+        }
+   }
+ }
+ .middle-container{
+    .logo_heading{
+        font-weight: 600;
+        margin: 8rem 0;
+        text-align: center;
+     }
+     .middle_row_container{
+        width: 80%;
+        margin: auto;
+     }
+ }
+
+ .bottom-container{
+    .bottom_row_container{
+        width: 50%;
+        margin: auto;
+     }
+ }
+}
+
+.tech_build_wrapper{
+   background-color: $black2;
+   .section_main_title{
+      margin-bottom: 10rem;
+   }
+   .tech_build_inner{
+     border: 1px solid $border-color3;
+     padding-top: 5rem;
+     padding-left: 5rem;
+    padding-right: 5rem;
+    min-height: 34rem;
+    display: flex;
+    margin-bottom: 2rem;
+    
+    h2{
+      text-align: right;
+    font-size: 6rem;
+    color: transparent;
+    -webkit-text-stroke: 2px $gray-13;
+     align-self: flex-end;
+    }
+    &:hover{
+      border-bottom: 1px solid $primary;
+   }
+   }
+   
+}

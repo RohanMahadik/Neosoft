@@ -1,0 +1,387 @@
+@import "variables";
+
+@font-face {
+    font-family: '#{$icomoon-font-family}';
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?t1iw61');
+    src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?t1iw61#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?t1iw61') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?t1iw61') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?t1iw61##{$icomoon-font-family}') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$icomoon-font-family}' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter {
+    &:before {
+        content: $icon-twitter;
+        color: #fff;
+    }
+}
+
+.icon-facebook {
+    &:before {
+        content: $icon-facebook;
+        color: #fff;
+    }
+}
+
+.icon-in {
+    &:before {
+        content: $icon-in;
+        color: #fff;
+    }
+}
+
+.icon-arrow {
+    &:before {
+        content: $icon-arrow;
+        color: #fff;
+    }
+}
+
+.icon-Analytics--Big-Data {
+    &:before {
+        content: $icon-Analytics--Big-Data;
+        color: #fff;
+    }
+}
+
+.icon-arrow-1 {
+    &:before {
+        content: $icon-arrow-1;
+        color: #fff;
+    }
+}
+
+.icon-Cloud-Computing {
+    &:before {
+        content: $icon-Cloud-Computing;
+        color: #fff;
+    }
+}
+
+.icon-cross {
+    &:before {
+        content: $icon-cross;
+        color: #fff;
+    }
+}
+
+.icon-drop-down {
+    &:before {
+        content: $icon-drop-down;
+        color: #fff;
+    }
+}
+
+.icon-fb .path1 {
+    &:before {
+        content: $icon-fb-path1;
+        color: rgb(70, 118, 237);
+    }
+}
+
+.icon-fb .path2 {
+    &:before {
+        content: $icon-fb-path2;
+        margin-left: -1em;
+        color: rgb(255, 255, 255);
+    }
+}
+
+.icon-flexible-work {
+    &:before {
+        content: $icon-flexible-work;
+        color: #5c5c5c;
+    }
+}
+
+.icon-Group-1470 {
+    &:before {
+        content: $icon-Group-1470;
+        color: #5c5c5c;
+    }
+}
+
+.icon-Group-1471 {
+    &:before {
+        content: $icon-Group-1471;
+        color: #5c5c5c;
+    }
+}
+
+.icon-Group-1475 {
+    &:before {
+        content: $icon-Group-1475;
+        color: #5c5c5c;
+    }
+}
+
+.icon-Group-1476 {
+    &:before {
+        content: $icon-Group-1476;
+        color: #5c5c5c;
+    }
+}
+
+.icon-Group-1477 {
+    &:before {
+        content: $icon-Group-1477;
+        color: #5c5c5c;
+    }
+}
+
+.icon-Group-1478 {
+    &:before {
+        content: $icon-Group-1478;
+        color: #5c5c5c;
+    }
+}
+
+.icon-Group-58168 {
+    &:before {
+        content: $icon-Group-58168;
+        color: #fff;
+    }
+}
+
+.icon-health-insurance {
+    &:before {
+        content: $icon-health-insurance;
+        color: #5c5c5c;
+    }
+}
+
+.icon-icon1 {
+    &:before {
+        content: $icon-icon1;
+        color: #fff;
+    }
+}
+
+.icon-Individual_Achievement_Perks {
+    &:before {
+        content: $icon-Individual_Achievement_Perks;
+        color: #5c5c5c;
+    }
+}
+
+.icon-instagram .path1 {
+    &:before {
+        content: $icon-instagram-path1;
+        color: rgb(0, 0, 0);
+    }
+}
+
+.icon-instagram .path2 {
+    &:before {
+        content: $icon-instagram-path2;
+        margin-left: -1.0341796875em;
+        color: rgb(255, 255, 255);
+    }
+}
+
+.icon-instagram .path3 {
+    &:before {
+        content: $icon-instagram-path3;
+        margin-left: -1.0341796875em;
+        color: rgb(255, 255, 255);
+    }
+}
+
+.icon-instagram .path4 {
+    &:before {
+        content: $icon-instagram-path4;
+        margin-left: -1.0341796875em;
+        color: rgb(255, 255, 255);
+    }
+}
+
+.icon-Internet-of-Things-IoT {
+    &:before {
+        content: $icon-Internet-of-Things-IoT;
+        color: #fff;
+    }
+}
+
+.icon-job-ten {
+    &:before {
+        content: $icon-job-ten;
+        color: #5c5c5c;
+    }
+}
+
+.icon-Late_Night_Meals_and_Rides {
+    &:before {
+        content: $icon-Late_Night_Meals_and_Rides;
+        color: #5c5c5c;
+    }
+}
+
+.icon-Life_Insurance {
+    &:before {
+        content: $icon-Life_Insurance;
+        color: #5c5c5c;
+    }
+}
+
+.icon-linkedin .path1 {
+    &:before {
+        content: $icon-linkedin-path1;
+        color: rgb(68, 103, 173);
+    }
+}
+
+.icon-linkedin .path2 {
+    &:before {
+        content: $icon-linkedin-path2;
+        margin-left: -1.037109375em;
+        color: rgb(254, 254, 254);
+    }
+}
+
+.icon-linkedin .path3 {
+    &:before {
+        content: $icon-linkedin-path3;
+        margin-left: -1.037109375em;
+        color: rgb(254, 254, 254);
+    }
+}
+
+.icon-linkedin .path4 {
+    &:before {
+        content: $icon-linkedin-path4;
+        margin-left: -1.037109375em;
+        color: rgb(254, 254, 254);
+    }
+}
+
+.icon-meal-allownce {
+    &:before {
+        content: $icon-meal-allownce;
+        color: #5c5c5c;
+    }
+}
+
+.icon-menu {
+    &:before {
+        content: $icon-menu;
+        color: #fff;
+    }
+}
+
+.icon-next-arrow-1 {
+    &:before {
+        content: $icon-next-arrow-1;
+        color: #6c6c6c;
+    }
+}
+
+.icon-Paid_Vacations__Hoildays {
+    &:before {
+        content: $icon-Paid_Vacations__Hoildays;
+        color: #5c5c5c;
+    }
+}
+
+.icon-Path-220 {
+    &:before {
+        content: $icon-Path-220;
+        color: #fff;
+    }
+}
+
+.icon-pre-arrow-1 {
+    &:before {
+        content: $icon-pre-arrow-1;
+        color: #6c6c6c;
+    }
+}
+
+.icon-Referral_Bonus {
+    &:before {
+        content: $icon-Referral_Bonus;
+        color: #5c5c5c;
+    }
+}
+
+.icon-Relocation_Allowance {
+    &:before {
+        content: $icon-Relocation_Allowance;
+        color: #5c5c5c;
+    }
+}
+
+.icon-search {
+    &:before {
+        content: $icon-search;
+        color: #fff;
+    }
+}
+
+.icon-Sodexo_logo {
+    &:before {
+        content: $icon-Sodexo_logo;
+        color: #5c5c5c;
+    }
+}
+
+.icon-Team_Performance_Perks {
+    &:before {
+        content: $icon-Team_Performance_Perks;
+        color: #5c5c5c;
+    }
+}
+
+.icon-travel-allownce {
+    &:before {
+        content: $icon-travel-allownce;
+        color: #676767;
+    }
+}
+
+.icon-web-development {
+    &:before {
+        content: $icon-web-development;
+        color: #fff;
+    }
+}
+
+.icon-welness-prog {
+    &:before {
+        content: $icon-welness-prog;
+        color: #5c5c5c;
+    }
+}
+
+.icon-you-tube .path1 {
+    &:before {
+        content: $icon-you-tube-path1;
+        color: rgb(218, 0, 0);
+    }
+}
+
+.icon-you-tube .path2 {
+    &:before {
+        content: $icon-you-tube-path2;
+        margin-left: -1em;
+        color: rgb(255, 255, 255);
+    }
+}

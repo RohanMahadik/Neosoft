@@ -1,0 +1,527 @@
+.about-container {
+  .vertical-line {
+    border-left: 2px solid $primary;
+    height: 14rem;
+    position: absolute;
+    left: 50%;
+    margin-top: 4rem;
+
+    @include breakpoint("mobile") {
+      margin-top: 0;
+      height: 10rem;
+    }
+
+    @include breakpoint("ipad-land") {
+      margin-top: 1rem;
+      height: 12rem;
+    }
+  }
+}
+
+.marked-counter {
+  background-color: $black2;
+  border-bottom: none;
+
+  .counter-about {
+    background-color: $counter-bg;
+    height: 24rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4.5rem 3rem;
+
+    @include breakpoint("ipad-land") {
+      margin: 0.8rem 0;
+      height: 16rem;
+    }
+  }
+
+  .about_counter {
+    color: $primary;
+    font-weight: 400;
+    line-height: normal;
+
+    @include breakpoint("ipad-land") {
+      margin-bottom: 1rem !important;
+    }
+  }
+
+  .about_para {
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+    line-height: 3rem;
+
+    // @include breakpoint("large") {
+    //   font-size: 3rem;
+
+    // }
+
+    @include breakpoint("desktop") {
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+
+    @include breakpoint("mobile") {
+      font-size: 1.8rem;
+    }
+
+    br {
+      display: none;
+
+      @include breakpoint("ipad") {
+        display: block;
+      }
+    }
+  }
+}
+
+.leadership-container {
+  .neosoft__leader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid $profile-border;
+
+    @include breakpoint("ipad-land") {
+      margin: 1rem;
+    }
+
+    .founder-text {
+      background-color: $black2;
+      width: 100%;
+      padding: 3rem;
+      border-bottom: 2px solid $primary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .founder-title {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+      }
+    }
+  }
+}
+
+.brand-container {
+  .neosoft__box {
+    display: flex;
+    align-items: center;
+    margin: 0.8rem 0;
+    padding: 2rem 4rem;
+    min-height: 25rem;
+    height: 90%;
+    width: 100%;
+    border: 1px solid $white;
+    color: $white;
+    flex-direction: column;
+
+    @include breakpoint("mobile") {
+      margin-bottom: 3rem;
+    }
+
+    p {
+      position: relative;
+      padding-top: 2rem;
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 0.1rem;
+        background: $white;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+      }
+    }
+
+    // .founder_space {
+    //   border-top: 1px solid $white;
+    //   width: 20rem;
+    //   opacity: 0.5;
+    //   color: $white;
+    //   margin: 2em 0;
+    // border-bottom: 0;
+    // background-color: $white;
+    // }
+  }
+}
+
+.brand-outer-container {
+  @include breakpoint("ipad-land") {
+    display: none;
+  }
+
+  padding: 8rem 0;
+  background-color: $black2;
+}
+
+.philosophy-container {
+  background-color: $black2;
+  padding-top: 14rem;
+  padding-bottom: 4rem;
+
+  @include breakpoint("ipad-land") {
+    padding-top: 6rem;
+    padding-bottom: 0;
+  }
+}
+
+.philosophy-container-bottom {
+  padding: 5rem 3.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.brand-container {
+  #hover-content {
+    display: none;
+  }
+
+  #parent:hover #hover-content {
+    display: block;
+  }
+
+  #parent {
+    width: 100%;
+    height: 50rem;
+    background-color: $primary;
+  }
+}
+
+.awards-container {
+  background-image: url(../images/line-bg.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include breakpoint("ipad-land") {
+    //    display: none;
+  }
+}
+
+.mobile_awards_container {
+  display: none;
+
+  @include breakpoint("ipad-land") {
+    display: block;
+
+    .slick-dots {
+      text-align: center;
+      top: 30rem;
+    }
+  }
+
+  .slick-slide img {
+    margin: 0 auto;
+  }
+}
+
+.mobile_awards_container {
+  .title_mobile_awards {
+    border-bottom: 2px solid $primary;
+    width: 40%;
+  }
+}
+
+.mobilesliderabout {
+  display: none;
+
+  @include breakpoint("ipad-land") {
+    display: block;
+    background: url(../images/phil.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .philslidercontainer {
+      padding: 5rem;
+
+      &.slick-dotted.slick-slider {
+        margin-bottom: 0;
+      }
+
+      .slick-dots {
+        text-align: center;
+        bottom: -3rem;
+      }
+    }
+  }
+}
+
+.blocks4-about-container {
+  background: url(../images/phil.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include breakpoint("ipad-land") {
+    display: none;
+  }
+}
+
+.about4_block {
+  height: 60rem;
+
+  @include breakpoint("large") {
+    height: 70rem;
+  }
+
+  @include breakpoint("desktop") {
+    height: 60rem;
+  }
+
+  .about4_block_item.active {
+    padding-top: 5rem;
+  }
+
+  .blocks4-division-container__item {
+    padding: 10rem 6rem 10rem;
+
+    &.active {
+      .about4_block_title {
+        font-size: 2.8rem;
+      }
+    }
+
+    .about4_block_title {
+      width: 100%;
+      text-align: left;
+
+      &:after {
+        height: 0;
+      }
+    }
+  }
+}
+
+.ecosystem-container {
+  background-image: url(../images/Intersection-1.png);
+  background-repeat: no-repeat;
+  background-position: -26rem;
+
+  @include breakpoint("ipad-land") {
+    background: none;
+    // margin-top: 8rem;
+    margin-top: 0;
+  }
+
+  h2 br {
+    @include breakpoint("ipad-land") {
+      display: none;
+    }
+  }
+
+  .ecosystem-text li {
+    @include breakpoint("ipad-land") {
+      margin: 0;
+    }
+
+    @include breakpoint("ipad") {
+      border: 0.1rem solid #5d5d5d;
+      padding: 3rem;
+
+      &:not(:first-child) {
+        margin: 3rem 0;
+      }
+
+      h3 {
+        @include breakpoint("ipad") {
+          font-size: 2.4rem;
+        }
+      }
+    }
+  }
+
+  .ecosystem-img {
+    position: sticky;
+    top: 10rem;
+
+    @include breakpoint("ipad") {
+      display: none;
+    }
+  }
+
+  .ecosystem-space {
+    color: $white;
+    opacity: 1;
+    width: 10rem;
+    margin: 3rem 0;
+
+    @include breakpoint("ipad") {
+      display: none;
+    }
+  }
+
+  .ecosystem-text {
+    // max-height: 72vh;
+    // overflow: hidden;
+    // overflow-y: scroll;
+    margin-top: 2rem;
+
+    @include breakpoint("ipad") {
+      // max-height: unset;
+      // overflow: unset;
+      margin-top: 0;
+    }
+  }
+}
+
+.about-slider-awards {
+  .slider_3d .slick-arrow {
+    top: 24rem;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .slick-circle-arrow {
+    .slick-prev {
+      right: auto;
+    }
+
+    .slick-next {
+      left: calc((100% - 111.5rem) / 2);
+    }
+  }
+}
+
+// awards css start from here
+
+.about-simple-newslider {
+  background: linear-gradient(141.98deg, #1d1d1d -20.99%, #000000 86.44%);
+  background-image: url(../images/line-bg.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .about-awards-container_slider-item {
+    display: flex;
+    margin-top: 3rem;
+
+    @include breakpoint("ipad") {
+      margin-top: 0;
+    }
+  }
+
+  .about-simple-awards {
+    .about-awards-container_slider-item {
+      background-color: transparent;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .about-awards-container_slider-item__info {
+        width: 50%;
+        // padding: 6rem 2rem 0 0;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        h2 {
+          font-size: 2.8rem;
+
+          @include breakpoint("ipad") {
+            font-size: 2rem;
+            margin-bottom: 0;
+          }
+        }
+
+        @include breakpoint("ipad") {
+          padding: 2rem 0 0;
+          text-align: center;
+          width: 100%;
+        }
+      }
+
+      .about_awards_image {
+        width: 50%;
+      }
+
+      .about-awards-container_slider-item__image {
+        @include breakpoint("ipad") {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      @include breakpoint("ipad") {
+        padding: 0;
+        text-align: center;
+        flex-direction: column-reverse;
+      }
+    }
+
+    .slick-dots {
+      bottom: -50px;
+      text-align: center;
+
+      @include breakpoint("ipad-land") {
+        bottom: -50px;
+        text-align: center;
+      }
+    }
+  }
+
+  .slick-next {
+    @include breakpoint("ipad") {
+      right: 0rem;
+    }
+  }
+
+  .slick-dots {
+    text-align: left;
+
+    @include breakpoint("ipad-land") {
+      text-align: center;
+    }
+  }
+
+  .slick-next {
+    @include breakpoint("ipad") {
+      right: 0rem;
+    }
+  }
+
+  .slick-prev {
+    @include breakpoint("ipad") {
+      left: 0rem;
+    }
+  }
+}
+
+.ecosystem-text {
+  li {
+    h3 {
+      font-size: 3rem;
+
+      @include breakpoint("large") {
+        font-size: 4.3rem;
+      }
+
+      // @include breakpoint("desktop-large") {
+      //   font-size: 3.5rem;
+      // }
+
+      @include breakpoint("desktop") {
+        font-size: 2.3rem;
+      }
+
+      @include breakpoint("ipad-land") {
+        font-size: 2.2rem;
+      }
+
+      @include breakpoint("small") {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+.blocks4-division-container__item:last-child:after {
+  display: none;
+}

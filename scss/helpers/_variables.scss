@@ -1,0 +1,153 @@
+/*font family*/
+$primary-font: "Gilroy";
+
+// container size
+$primary-container: 126.5rem;
+$primary-large-container: 163rem;
+
+/*color*/
+$black: #000000;
+$white: #ffffff;
+$primary: #ed1819;
+$red-2: #90040b;
+
+$border-color: #5d5d5d;
+$gray-1: #212124;
+$gray-2: #28282c;
+$gray-3: #343434;
+$gray-4: #454548;
+$gray-5: #6c6c6c;
+$gray-6: #727070;
+$gray-7: #9f9f9f;
+$gray-8: #a6a7aa;
+$gray-9: #838383;
+$gray-10: #707070;
+$gray-11: #1a1a1a;
+$border-color2: #ef1119;
+$grey-border: #a2a2a2;
+$grey-card: #262626;
+$grey-card-item: #535353;
+$grey-11: #d6d6d6;
+$grey-12: #a8a8a8;
+$gray-13: #404040;
+$gray-14: #efefef;
+$gray-15: #a6a7aa;
+$gray-16: #474747;
+$gray-17: #6d766d;
+$gray-18: #a0a0a0;
+$gray-19: #c3c3c3;
+$profile-border: #28282b;
+$counter-bg: #1e1e20;
+$tag-color: #444448;
+
+$white1: #f0f1f0;
+$black1: #454548;
+$black2: #151517;
+$client-bg: #fffefec4;
+$brown1: #1a1a1a;
+$border-color3: #707070;
+
+// $icomoon-font-family: "icomoon" !default;
+// $icomoon-font-path: "/app/fonts/icomoon" !default;
+
+// $icon-arrow: "\e900";
+// $icon-drop-down: "\e901";
+// $icon-fb-path1: "\e902";
+// $icon-fb-path2: "\e903";
+// $icon-instagram-path1: "\e904";
+// $icon-instagram-path2: "\e905";
+// $icon-instagram-path3: "\e906";
+// $icon-instagram-path4: "\e907";
+// $icon-linkedin-path1: "\e908";
+// $icon-linkedin-path2: "\e909";
+// $icon-linkedin-path3: "\e90a";
+// $icon-linkedin-path4: "\e90b";
+// $icon-menu: "\e90c";
+// $icon-next-arrow: "\e90d";
+// $icon-pre-arrow: "\e90e";
+// $icon-search: "\e90f";
+// $icon-you-tube-path1: "\e910";
+// $icon-you-tube-path2: "\e911";
+
+$imaage-path: "../images";
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "../fonts/icomoon" !default;
+
+$icon-twitter: "\e92f";
+$icon-facebook: "\e930";
+$icon-in: "\e931";
+$icon-arrow: "\e92e";
+$icon-Analytics--Big-Data: "\e900";
+$icon-arrow-1: "\e901";
+$icon-Cloud-Computing: "\e902";
+$icon-cross: "\e903";
+$icon-drop-down: "\e904";
+$icon-fb-path1: "\e905";
+$icon-fb-path2: "\e906";
+$icon-flexible-work: "\e907";
+$icon-Group-1470: "\e908";
+$icon-Group-1471: "\e909";
+$icon-Group-1475: "\e90a";
+$icon-Group-1476: "\e90b";
+$icon-Group-1477: "\e90c";
+$icon-Group-1478: "\e90d";
+$icon-Group-58168: "\e90e";
+$icon-health-insurance: "\e90f";
+$icon-icon1: "\e910";
+$icon-Individual_Achievement_Perks: "\e911";
+$icon-instagram-path1: "\e912";
+$icon-instagram-path2: "\e913";
+$icon-instagram-path3: "\e914";
+$icon-instagram-path4: "\e915";
+$icon-Internet-of-Things-IoT: "\e916";
+$icon-job-ten: "\e917";
+$icon-Late_Night_Meals_and_Rides: "\e918";
+$icon-Life_Insurance: "\e919";
+$icon-linkedin-path1: "\e91a";
+$icon-linkedin-path2: "\e91b";
+$icon-linkedin-path3: "\e91c";
+$icon-linkedin-path4: "\e91d";
+$icon-meal-allownce: "\e91e";
+$icon-menu: "\e91f";
+$icon-next-arrow-1: "\e920";
+$icon-Paid_Vacations__Hoildays: "\e921";
+$icon-Path-220: "\e922";
+$icon-pre-arrow-1: "\e923";
+$icon-Referral_Bonus: "\e924";
+$icon-Relocation_Allowance: "\e925";
+$icon-search: "\e926";
+$icon-Sodexo_logo: "\e927";
+$icon-Team_Performance_Perks: "\e928";
+$icon-travel-allownce: "\e929";
+$icon-web-development: "\e92a";
+$icon-welness-prog: "\e92b";
+$icon-you-tube-path1: "\e92c";
+$icon-you-tube-path2: "\e92d";
+
+$desktop-large: 83%;
+$desktopsmall1280: 95%;
+
+$responsiveSpaceLeftRight: 1rem;
+$responsiveContainerSpace: 0.75rem;
+$responsiveCalcSpace: calc($responsiveSpaceLeftRight + $responsiveContainerSpace);
+
+
+$vertPad: 80px;
+$sidePad: 0px;
+
+$numOfEls: 4;
+$elMrg: 0.5%;
+
+$initAT: 1s;
+$initDelayStep: 0.1s;
+$fullInitAT: $initAT + $initDelayStep * ($numOfEls - 1);
+$moveAT: 0.6s;
+$expandAT: 0.7s;
+$expandDelay: 0.1s;
+$bgScaleAT: 0.8s;
+$fadeoutAT: $moveAT +(calc($expandAT / 2));
+$indexHoverAT: 0.5s;
+$closeBtnAT: 0.3s;
+$closeBtnLineDelay: 0.15s;
+$fullExpandAT: $moveAT + $expandDelay + $expandAT;
+$contentFadeinAT: 0.5s;

@@ -1,0 +1,87 @@
+.mdl-textfield {
+  padding: 1.5rem 0;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint("ipad") {
+    padding: 1rem 0;
+  }
+
+  .mdl-textfield__input.form-control {
+    padding: 1.5rem 0;
+    color: $gray-8;
+  }
+
+  .mdl-textfield__input {
+    color: $gray-8;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+  }
+
+  .mdl-textfield__label {
+    left: 0;
+
+    &::before {
+      background: transparent;
+    }
+  }
+
+  .mdl-textfield__label {
+    color: $gray-8;
+    margin-bottom: 0;
+    font-size: 1.7rem;
+
+    @include breakpoint("large") {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @include breakpoint("ipad") {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.mdl-textfield--floating-label.is-focused {
+  .mdl-textfield__label {
+    color: $gray-8;
+    margin-bottom: 0;
+    font-size: 1.7rem;
+    padding: 0;
+
+    @include breakpoint("large") {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @include breakpoint("ipad") {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.mdl-textfield--floating-label.is-dirty {
+  .mdl-textfield__label {
+    color: $gray-8;
+    margin-bottom: 0;
+    font-size: 1.7rem;
+    padding: 0;
+
+    @include breakpoint("large") {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @include breakpoint("ipad") {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.mdl-textfield.is-invalid .mdl-textfield__label:after {
+  background-color: transparent !important;
+}

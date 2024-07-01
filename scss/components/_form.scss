@@ -1,0 +1,215 @@
+.form-control {
+  @include transition;
+
+  &:focus {
+    border-color: $primary !important;
+    @include transition;
+  }
+}
+
+.select_box {
+  &.insight__topic {
+    padding: 0;
+
+    .select-styled {
+      position: relative;
+      margin: 0;
+      padding: 1rem 8rem 1rem 4rem;
+      border: 1px solid $white;
+      color: $white;
+
+      &::after {
+        width: 2rem;
+        height: 2rem;
+        bottom: 1rem;
+        right: 2rem;
+        top: 0;
+        margin: auto;
+        color: $white;
+      }
+    }
+
+    &.active {
+      .select-styled {
+        background: $black;
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+.select-box-item {
+  margin: 0 7rem 0 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.popup_form {
+  background: $white;
+  border-radius: 1rem 1rem 1rem 0;
+  max-width: 50rem;
+  padding: 4rem;
+  text-align: left;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  margin: auto;
+  display: none;
+  @include breakpoint("ipad-land") {
+    max-width: 35rem;
+  }
+  @include breakpoint("mobile") {
+    left: 0;
+    padding: 2rem;
+  }
+  &::after {
+    content: "";
+    background: url("../images/form-popup-bottom.svg") no-repeat;
+    position: absolute;
+    top: 100%;
+    width: 23rem;
+    height: 4rem;
+    left: -13.05rem;
+    @include breakpoint("desktopsmall1280") {
+      width: 26rem;
+      left: -14.5rem;
+    }
+    @include breakpoint("ipad-land") {
+      width: 20rem;
+      left: 0;
+    }
+    @include breakpoint("ipad-land") {
+      display: none;
+    }
+  }
+  &::before {
+    @include breakpoint("ipad-land") {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid $white;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  br {
+    display: none;
+  }
+  .mdl-textfield {
+    padding-bottom: 0;
+  }
+  textarea {
+    height: 8rem;
+  }
+  &_container {
+    position: relative;
+    padding-top: 5rem;
+    @include breakpoint("ipad") {
+      padding-top: 2rem;
+    }
+  }
+
+  &__inner {
+    &-heading {
+      &-title,
+      p {
+        color: $black;
+      }
+
+      &-title {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-weight: 500;
+      }
+
+      p {
+        line-height: 2rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .wpcf7 form .wpcf7-response-output {
+    margin: 1rem 0 0 0;
+    border: 0;
+    padding: 0;
+    color: #000000;
+  }
+  .wpcf7-not-valid-tip {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.mdl-textfield {
+  width: 100%;
+
+  &__label {
+    &:after {
+      background-color: transparent;
+    }
+
+    &::before {
+      content: "";
+      background: $white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3rem;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &__input {
+    border: 1px solid $grey-border;
+    border-radius: 5px;
+    padding: 1rem;
+    color: #000000;
+    font-size: 1.6rem;
+    font-family: $primary-font;
+  }
+
+  &.is-focused {
+    .mdl-textfield {
+      &__input {
+        border-color: $primary;
+      }
+    }
+
+    .mdl-textfield__label {
+      padding: 0 0.8rem;
+    }
+  }
+
+  &--floating-label {
+    .mdl-textfield {
+      &__label {
+        width: auto;
+        right: auto;
+        left: 1rem;
+        bottom: auto;
+        top: 3rem;
+        font-size: 1.4rem;
+        color: $gray-5;
+      }
+    }
+  }
+}
+
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label,
+.mdl-textfield--floating-label.is-dirty .mdl-textfield__label,
+.mdl-textfield--floating-label.has-placeholder .mdl-textfield__label {
+  color: $primary;
+  padding: 0 0.8rem;
+}

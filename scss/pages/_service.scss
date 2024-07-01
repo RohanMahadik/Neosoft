@@ -1,0 +1,738 @@
+.leading-container {
+  &__outer-item {
+    @include breakpoint("ipad") {
+      margin-bottom: 2rem;
+    }
+
+    &:nth-last-child(2),
+    &:last-child {
+      // margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    text-align: center;
+    border: 1px solid $white;
+    padding: 8rem 3rem;
+    height: 100%;
+
+    @include breakpoint("ipad-land") {
+      padding: 5rem 2rem;
+    }
+
+    @include breakpoint("desktopsmall1280") {
+      padding: 5rem 1rem;
+    }
+
+    @include breakpoint("small") {
+      padding: 3rem 2rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+      margin-bottom: 0;
+      line-height: 2.4rem;
+
+      @include breakpoint("ipad-land") {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+      }
+
+      @include breakpoint("small") {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 0rem;
+
+    @include breakpoint("ipad-land") {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint("small") {
+      font-size: 2rem;
+    }
+
+    span {
+      display: block;
+      font-size: 2.4rem;
+      line-height: 3rem;
+      margin-top: 1rem;
+
+      br {
+        display: none;
+
+        @include breakpoint("mobile") {
+          display: block;
+        }
+      }
+
+      @include breakpoint("large") {
+        font-size: 3rem;
+        // line-height: 5.5rem;
+      }
+
+      @include breakpoint("desktop") {
+        font-size: 2.2rem;
+        // line-height: 3rem;
+      }
+
+      @include breakpoint("ipad-land") {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+
+      @include breakpoint("small") {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.static-banner {
+}
+
+.banner__slideinfo.static-banner {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  left: 0;
+  max-width: 130rem;
+
+  @include breakpoint("ipad-land") {
+    padding-top: 0;
+    position: absolute;
+    top: 50%;
+    max-width: 100% !important;
+    padding-left: $responsiveCalcSpace;
+    padding-right: $responsiveCalcSpace;
+  }
+
+  h1 {
+    color: $white;
+    // margin-bottom: 2.5rem;
+    // font-size: 6.5rem;
+
+    @include breakpoint("large") {
+      // font-size: 8rem;
+    }
+
+    @include breakpoint("ipad-land") {
+      // font-size: 5rem;
+    }
+
+    @include breakpoint("small") {
+      // font-size: 3.5rem;
+    }
+  }
+}
+
+.value-container {
+  background: #151517;
+
+  &_item {
+    margin-top: 5rem;
+
+    &:first-child,
+    &:nth-child(2),
+    &:nth-child(3) {
+      @include breakpoint("ipadmin") {
+        margin-top: 0;
+      }
+    }
+
+    &:first-child,
+    &:nth-child(2) {
+      @include breakpoint("ipad") {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      @include breakpoint("mobile") {
+        margin-top: 5rem;
+      }
+    }
+  }
+
+  &_item-inner {
+    position: relative;
+    padding-left: 7rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+
+    @include breakpoint("ipad-land") {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 2rem;
+    }
+
+    &::before {
+      content: "";
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 50%;
+      background: #28282b;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include breakpoint("ipad-land") {
+        top: -3rem;
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+    }
+
+    &::after {
+      content: "";
+      background: url("../images/tick-mark.svg") no-repeat;
+      background-size: contain;
+      width: 2rem;
+      position: absolute;
+      top: 1.5rem;
+      left: 1.3rem;
+      height: 2rem;
+
+      @include breakpoint("ipad-land") {
+        top: -1.8rem;
+        left: 1.1rem;
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+
+    p {
+      color: $grey-11;
+    }
+  }
+
+  h2 {
+    @include breakpoint("ipad-land") {
+      margin-bottom: 6rem;
+    }
+
+    br {
+      @include breakpoint("ipad-land") {
+        display: none;
+      }
+    }
+  }
+}
+
+.user-exp-container {
+  .whatwedo__inner .slider-single .slick-slide {
+    // background: url("../images/slide1.jpg") no-repeat;
+    // background-size: cover;
+  }
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active,
+.slick-slide {
+  .whatwedodesktop {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    display: block !important;
+
+    @include breakpoint("ipad-land") {
+      display: none !important;
+    }
+  }
+
+  .whatwedotab {
+    height: 100%;
+    width: 100%;
+    display: none !important;
+
+    @include breakpoint("ipad-land") {
+      display: block !important;
+      // object-fit: cover;
+    }
+
+    @include breakpoint("ipad") {
+      display: none !important;
+    }
+
+    @media screen and (min-width: "min992") and (max-width: "desktopsmall1280") {
+      display: none !important;
+    }
+  }
+
+  .whatwedomobile {
+    height: 100%;
+    width: 100%;
+    display: none !important;
+
+    @include breakpoint("ipad") {
+      display: block !important;
+      // object-fit: cover;
+    }
+  }
+}
+
+.imgwhatwedo {
+  position: relative;
+  object-fit: cover;
+  // width: 100%;
+  // object-fit: cover;
+
+  // @include breakpoint("ipadmin") {
+  //   height: 100%;
+  // }
+
+  &_container {
+    width: 100%;
+    position: relative;
+
+    @include breakpoint("ipadmin") {
+      height: 100%;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.digitalcapablities_para {
+  font-size: 1.7rem;
+  margin-top: 2rem;
+  padding: 0 20rem;
+  text-align: center;
+
+  @include breakpoint("ipad-land") {
+    padding: 0;
+    text-align: left;
+  }
+}
+
+.path-breaking-container {
+  background: linear-gradient(141.98deg, #1d1d1d -20.99%, #000000 86.44%);
+
+  &_slider-item {
+    display: flex;
+  }
+
+  .slick-dotted.slick-slider {
+    @include breakpoint("ipad-land") {
+      margin-bottom: 0;
+      padding-bottom: 3rem;
+    }
+  }
+}
+
+.path-breaking-container_slider-item__image {
+  img {
+    object-fit: cover;
+    @include breakpoint("ipadmin") {
+      height: 100%;
+    }
+  }
+}
+
+.path-breaking-container_slider-item {
+  display: flex;
+  background: $gray-2;
+  height: 100%;
+
+  @include breakpoint("ipad") {
+    flex-direction: column-reverse;
+  }
+
+  &__title {
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+    position: relative;
+
+    @include breakpoint("ipad-land") {
+      padding-bottom: 2rem;
+      margin-bottom: 3rem;
+      font-size: 1.9rem;
+    }
+
+    &::after {
+      content: "";
+      width: 16rem;
+      height: 0.3rem;
+      background: $primary;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include transition;
+
+      @include breakpoint("ipad-land") {
+        height: 0.1rem;
+      }
+    }
+  }
+
+  &__info {
+    width: 60%;
+    // border: 1px solid #575757;
+    padding: 7rem 5rem 5rem 7rem;
+
+    @include breakpoint("ipad") {
+      width: 100%;
+      padding: 3rem 2rem 2rem 2rem;
+      height: calc(100% - 30rem);
+    }
+
+    p {
+      font-size: 1.7rem;
+
+      @include breakpoint("ipad-land") {
+        font-size: 1.3rem;
+      }
+
+      &.big-txt {
+        font-size: 8rem;
+        line-height: 10rem;
+        margin-bottom: 0;
+
+        @include breakpoint("large") {
+          font-size: 10rem;
+          line-height: 8rem;
+        }
+
+        @include breakpoint("ipad-land") {
+          font-size: 4rem;
+          line-height: 5rem;
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: 40%;
+
+    @include breakpoint("ipad") {
+      width: 100%;
+      height: 30rem;
+      overflow: hidden;
+    }
+  }
+}
+
+.path-breaking-container_slider {
+  .slick-next {
+    right: -5rem;
+
+    @include breakpoint("desktopsmall1280") {
+      right: -3rem;
+
+      &::before {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .slick-prev {
+    left: -5rem;
+
+    @include breakpoint("desktopsmall1280") {
+      left: -3rem;
+
+      &::before {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+.value-step-container {
+  &__item {
+    margin-bottom: 1rem;
+  }
+
+  &__item-inner {
+    height: 100%;
+    border: 1px solid $border-color;
+    padding: 6rem 6rem 6rem 4rem;
+    position: relative;
+
+    h3 {
+      font-size: 2rem;
+      margin-bottom: 2.3rem;
+      line-height: 2.8rem;
+      margin-top: 0;
+
+      @include breakpoint("large") {
+        font-size: 2.4rem;
+        line-height: 3.5rem;
+        margin-bottom: 3rem;
+      }
+
+      @include breakpoint("ipad-land") {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        line-height: 2.4rem;
+      }
+    }
+
+    @include breakpoint("ipad-land") {
+      padding: 3rem 2rem 3rem 2rem;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 0.4rem;
+      background: $primary;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      @include transition;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &::after {
+        opacity: 1;
+        @include transition;
+      }
+    }
+  }
+
+  p {
+    color: $grey-11;
+  }
+}
+
+.blocks4-division-container {
+  background: url("../images/background2.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.blocks4-division-container {
+  position: relative;
+
+  &__outer {
+    position: absolute;
+    top: 12rem;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    @extend .container;
+
+    @include breakpoint("ipad-land") {
+      top: 4rem;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    padding-bottom: 2rem;
+    position: relative;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    width: 80%;
+    margin: 0 auto;
+
+    @include breakpoint("ipad-land") {
+      font-size: 2rem;
+    }
+
+    @include breakpoint("small") {
+      font-size: 1.8rem;
+    }
+
+    &::after {
+      content: "";
+      width: 8rem;
+      height: 0.1rem;
+      background: $white;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: 0;
+    }
+  }
+
+  &__items {
+    display: flex;
+    margin-bottom: 0;
+    height: 100%;
+
+    @include breakpoint("ipad-land") {
+      overflow: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+
+    @include breakpoint("ipad-land") {
+      min-width: 75%;
+      // white-space: nowrap;
+    }
+
+    @include breakpoint("min992") {
+      flex: 1;
+    }
+
+    padding: 40rem 6rem 10rem;
+    position: relative;
+
+    @include breakpoint("ipad-land") {
+      padding: 20rem 3rem 20rem;
+    }
+
+    &::after {
+      content: "";
+      width: 0.8rem;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: $black;
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    .listing_items {
+      height: 0;
+      opacity: 0;
+      @include transition;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    background: rgba(0, 0, 0, 0);
+    @include transition;
+
+    &.active {
+      padding-top: 30rem;
+      background: rgba(0, 0, 0, 0.8);
+      @include transition;
+
+      @include breakpoint("ipad-land") {
+        padding-top: 18rem;
+        padding-bottom: 5rem;
+      }
+
+      .listing_items {
+        height: 100%;
+        opacity: 1;
+        @include transition;
+      }
+
+      .blocks4-division-container__title {
+        width: 100%;
+        // font-size: 2rem;
+        text-align: left;
+
+        &::after {
+          opacity: 0;
+        }
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//added by rohan
+.whatwedo__item__description {
+  .whatwedo__item {
+    .btn {
+      @include breakpoint("mobile") {
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  ul {
+    margin-top: 3rem;
+
+    li {
+      font-size: 2rem;
+
+      @include breakpoint("large") {
+        font-size: 2.4rem;
+      }
+
+      @include breakpoint("ipad-land") {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.path-breaking-container_slider-item__info {
+  .description {
+    ul {
+      li {
+        position: relative;
+        padding-left: 2rem;
+
+        &:before {
+          width: 0.5rem;
+          height: 0.5rem;
+          background: #ffffff;
+          content: "";
+          border-radius: 50%;
+          position: absolute;
+          left: 0;
+          top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.parallaxtitle {
+  display: none;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1rem;
+    width: 50%;
+    height: 2px;
+    background-color: $primary;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  @include breakpoint("ipad") {
+    display: block;
+    margin-bottom: 3rem;
+  }
+}

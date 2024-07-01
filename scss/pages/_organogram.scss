@@ -1,0 +1,111 @@
+
+    .table_inner{
+        .designation__table__data{
+            .designation__table__data__item{
+                margin-bottom: 0;
+            }
+        }
+        .table>:not(caption)>*>*{
+            padding: 2rem;
+        }
+
+   }
+
+
+
+.organogram_container {
+   background-color: #eaeced;
+    .organogram__img_container {
+        .nav{
+            @include breakpoint("ipad-land") {
+                flex-wrap: inherit !important;
+                overflow: auto;
+                justify-content: inherit !important;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                  }
+            
+            
+            }
+           
+        }
+      .nav-tab {
+        margin-bottom: 3rem;
+        justify-content: center;
+        .nav-item {
+          @include breakpoint("mobile") {
+            padding-right: 1rem;
+          }
+          .nav-link {
+            color: $black;
+            background: $white;
+            border: 0;
+            padding: 1.2rem 4rem;
+            font-size: 1.8rem;
+            border-radius: 5rem;
+            cursor: pointer;
+            margin-bottom: 2rem;
+            transition: all .5s ease-out;
+            position: relative;
+            overflow: hidden;
+            // @include transition;
+          
+           
+          &:before {
+            content: '';
+            display: block;
+            background: $primary;
+
+            height: calc(100% + 2px);
+            width: calc(100% + 2px);
+            position: absolute;
+            border-radius: 5rem;
+            left: -1px;
+            top: -1px;
+            transform: translate(-100%, 0) rotate(10deg);
+            transform-origin: top left;
+            transition: transform .5s ease-out;
+            z-index: -1;
+          }
+
+
+            &:hover {
+              background: $primary;
+              color: $white;
+              border: none;
+              transform: translate(0, 0);         
+
+              &:before {
+                transform: translate(0, 0);
+  
+              }
+            }
+  
+            @include breakpoint("desktop") {
+              padding: 1.1rem 3.6rem;
+              font-size: 1.6rem;
+            }
+  
+            @include breakpoint("large") {
+              padding: 1.6rem 5.5rem;
+              font-size: 2rem;
+            }
+  
+            @include breakpoint("mobile") {
+              padding-left: 2rem;
+              padding-right: 2rem;
+              font-size: 1.4rem;
+            }
+          }
+  
+          .active {
+            background-color: $primary;
+            color: $white;
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,10 @@
+.recaptcha span > div {
+  width: 100% !important;
+}
+.recaptcha span iframe {
+  max-width: 100%;
+}
+.rc-anchor-light {
+  background: $black;
+  color: $white;
+}

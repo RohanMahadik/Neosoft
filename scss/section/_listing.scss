@@ -1,0 +1,25 @@
+.listing_items {
+  li {
+    color: $grey-11;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0 0 0 2rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0.5rem;
+      height: 0.5rem;
+      background: $grey-11;
+      border-radius: 50%;
+      left: 0;
+      top: 0.8rem;
+    }
+    @include breakpoint("large") {
+      font-size: 2rem;
+    }
+    @include breakpoint("ipad-land") {
+      font-size: 1.2rem;
+    }
+  }
+}

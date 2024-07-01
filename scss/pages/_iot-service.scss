@@ -1,0 +1,270 @@
+.whatwedo__inner {
+  .iot-decription-section {
+    .slick-slide {
+      background: none;
+      padding: 0;
+      display: block;
+    }
+  }
+}
+.awards_iot_container {
+  background-image: url("../images/bacground_the_news.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 3rem;
+}
+
+.iot-custom-service {
+  .slick-list {
+    @include breakpoint("ipadmin") {
+      height: auto !important;
+    }
+  }
+  &.whatwedo__inner {
+    .slider-single {
+      padding-top: 0;
+    }
+  }
+}
+
+// awards css start here
+.awards-container_slider-item {
+  display: flex;
+
+  @include breakpoint("ipad-land") {
+    flex-direction: column;
+  }
+
+  &__title {
+    padding-bottom: 3rem;
+    margin-bottom: 4rem;
+    position: relative;
+
+    @include breakpoint("ipad-land") {
+      padding-bottom: 2rem;
+      margin-bottom: 3rem;
+      font-size: 1.9rem;
+    }
+  }
+
+  &__info {
+    width: 60%;
+    padding: 30rem 5rem 5rem 7rem;
+
+    @include breakpoint("ipad-land") {
+      width: 100%;
+      order: 1;
+      padding: 3rem 2rem 2rem 2rem;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.7rem;
+
+      @include breakpoint("ipad-land") {
+        font-size: 1.3rem;
+      }
+
+      &.big-txt {
+        font-size: 8rem;
+        line-height: 10rem;
+        margin-bottom: 0;
+
+        @include breakpoint("large") {
+          font-size: 10rem;
+          line-height: 8rem;
+        }
+
+        @include breakpoint("ipad-land") {
+          font-size: 4rem;
+          line-height: 5rem;
+        }
+      }
+    }
+  }
+
+  &__image {
+    width: 40%;
+
+    @include breakpoint("ipad-land") {
+      width: 100%;
+    }
+  }
+}
+.awards-container_slider {
+  .slick-next {
+    right: -5rem;
+  }
+
+  .slick-prev {
+    left: -5rem;
+  }
+}
+
+.awards-container {
+  .slick-dots {
+    text-align: left;
+    bottom: 10rem;
+    left: 10rem;
+    right: 0;
+  }
+  .slick-arrow {
+    display: none !important;
+  }
+}
+// awards css end here
+
+.iot-decription-section {
+  &.slick-slider .slick-list,
+  &.slick-slider .slick-track {
+    transform: none;
+    height: auto !important;
+  }
+  .slick-track {
+    z-index: 0;
+  }
+}
+.parallax-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  &_item {
+    width: calc(33.3% - 1.4rem);
+    box-sizing: border-box;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    @include breakpoint("desktopsmall1050") {
+      width: calc(50% - 1.1rem);
+    }
+    @include breakpoint("mobile") {
+      width: 100%;
+      margin-right: 0;
+    }
+    &:first-child,
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-top: 0;
+    }
+    &:nth-child(3n) {
+      margin-right: 0;
+      @include breakpoint("desktopsmall1050") {
+        margin-top: 2rem;
+        margin-right: 2rem;
+      }
+      @include breakpoint("mobile") {
+        margin-right: 0;
+      }
+    }
+    &:nth-child(2n) {
+      @include breakpoint("desktopsmall1050") {
+        margin-right: 0;
+      }
+      @include breakpoint("mobile") {
+        margin-top: 2rem;
+      }
+    }
+
+    &-inner {
+      background-image: url("../images/iot_background.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 25rem;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      position: relative;
+      transition: 0.5s all;
+      @include breakpoint("large") {
+        min-height: 30rem;
+      }
+      @include breakpoint("desktopsmall1280") {
+        min-height: 22rem;
+      }
+      @include breakpoint("desktopsmall1050") {
+        min-height: 25rem;
+      }
+      @include breakpoint("ipad-land") {
+        min-height: 20rem;
+      }
+      @include breakpoint("ipad") {
+        min-height: 22rem;
+      }
+      &:hover {
+        transition: 0.5s all;
+        .parallax-container_item_overlay {
+          opacity: 1;
+          transition: 0.5s all;
+        }
+      }
+    }
+  }
+}
+
+.parallax-container_item_title {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  p {
+    margin: 0;
+  }
+}
+.parallax-container_item_overlay {
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s all;
+  &::before {
+    content: "";
+    background: url("../images/iot-red-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  p {
+    margin: 0;
+  }
+}
+.parallax-container_item_overlay_inner {
+  position: relative;
+}
+.iot-custom-service {
+  &.whatwedo__inner .slick-next,
+  &.whatwedo__inner .slick-prev {
+    top: calc(50% - 7rem);
+    transform: translateY(50%);
+    @include breakpoint("ipad-land") {
+      top: calc(50% - 4rem);
+    }
+  }
+}

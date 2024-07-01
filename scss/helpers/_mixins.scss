@@ -1,0 +1,168 @@
+$breakpoints: (
+  "small": (
+    max-width: 419px,
+  ),
+  "mobile": (
+    max-width: 575px,
+  ),
+  "mobilemin": (
+    min-width: 576,
+  ),
+  "ipad": (
+    max-width: 767px,
+  ),
+  "ipadmin": (
+    min-width: 768px,
+  ),
+  "ipad-land": (
+    max-width: 991px,
+  ),
+  "ipad-land-900": (
+    max-width: 900px,
+  ),
+  "min992": (
+    min-width: 992px,
+  ),
+  "desktopsmall1280": (
+    max-width: 1280px,
+  ),
+  "desktopsmall1050": (
+    max-width: 1150px,
+  ),
+  "desktopsmall": (
+    max-width: 1300px,
+  ),
+  "desktop-large": (
+    max-width: 1919px,
+  ),
+  "larger-screen": (
+    min-width: 1920px,
+  ),
+  "desktop": (
+    max-width: 1366px,
+  ),
+  "large": (
+    min-width: 1660px,
+  ),
+);
+
+@mixin breakpoint($name) {
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  } @else {
+    @warn "Couldn't find a breakpoint named `#{$name}`.";
+  }
+}
+
+// Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+/* placeholder */
+@mixin input-placeholder {
+  &.placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+
+// Transition
+@mixin transition($what: all, $time: 0.5s, $how: ease-in-out) {
+  transition: $what $time $how;
+}
+
+// rgba Border
+@mixin border-rgba($color, $opacity) {
+  border: 1px solid rgba(red($color), green($color), blue($color), $opacity);
+}
+
+@mixin border-left-rgba($color, $opacity) {
+  border-left: 1px solid
+    rgba(red($color), green($color), blue($color), $opacity);
+}
+
+@mixin border-top-rgba($color, $opacity) {
+  border-top: 1px solid rgba(red($color), green($color), blue($color), $opacity);
+}
+
+@mixin border-bottom-rgba($color, $opacity) {
+  border-bottom: 1px solid
+    rgba(red($color), green($color), blue($color), $opacity);
+}
+
+// Background Color rgba
+@mixin background-color-rgba($color, $opacity) {
+  background-color: rgba($color, $opacity);
+}
+
+// Color rgba
+@mixin color-rgba($color, $opacity) {
+  color: rgba($color, $opacity);
+}
+
+// Horizontal and Center Align using Transform
+@mixin horizontal-center-transform {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin vertical-center-transform {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-vertical-center-transform {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Center Block
+@mixin center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin tertiary-red-btn {
+  background: $primary;
+  font-size: 1.5rem;
+  padding: 1rem 2.2rem;
+  border: none;
+  color: $white;
+  @include transition(0.5s);
+
+  &:hover {
+    background: $red-2;
+    @include transition(0.5s);
+  }
+}

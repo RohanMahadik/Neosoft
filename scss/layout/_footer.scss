@@ -1,0 +1,447 @@
+.footersection {
+  background-color: $gray-1;
+  padding: 6.2rem 0 3.1rem 0;
+
+  @include breakpoint("large") {
+    padding: 8.7rem 0 7.3rem 0;
+  }
+
+  @include breakpoint("ipad-land") {
+    padding-bottom: 1rem;
+    padding-top: 4rem;
+    padding-left: $responsiveSpaceLeftRight;
+    padding-right: $responsiveSpaceLeftRight;
+  }
+
+  &__container {
+    width: 100%;
+    display: flex;
+  }
+
+  &__sectioncontainer {
+    width: 100%;
+
+    @include breakpoint("ipad-land") {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__firstsection {
+    width: 23%;
+
+    @include breakpoint("ipad-land") {
+      width: 18%;
+    }
+
+    @include breakpoint("ipad") {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+
+    img {
+      @include breakpoint("ipad-land") {
+        width: 80%;
+      }
+    }
+  }
+
+  &__secondsection {
+    width: 55%;
+
+    @include breakpoint("ipad-land") {
+      width: 64%;
+    }
+
+    @include breakpoint("ipad") {
+      width: 100%;
+    }
+
+    @include breakpoint("small") {
+      display: block !important;
+    }
+  }
+
+  &__thirdsection {
+    width: 27%;
+    padding-left: 9rem;
+    align-items: flex-start !important;
+
+    @include breakpoint("ipad-land") {
+      width: 16%;
+      padding-left: 1.5rem;
+    }
+
+    @include breakpoint("ipad") {
+      width: 100%;
+      padding-left: 0;
+      display: block !important;
+    }
+  }
+
+  ul.footersection__brand {
+    width: 16rem;
+
+    @include breakpoint("ipad-land") {
+      width: 100%;
+    }
+
+    @include breakpoint("ipad") {
+      display: inline-flex;
+    }
+
+    @include breakpoint("small") {
+      display: block;
+    }
+  }
+
+  // &__list1 {
+  //     width: 20%;
+  // }
+
+  // &__list2 {
+  //     width: 50%;
+
+  //     ul {
+  //         column-count: 3;
+  //     }
+  // }
+
+  // &__list3 {
+  //     width: 30%;
+  // }
+
+  &__socialmedia {
+    ul {
+      li {
+        &:not(:first-child) {
+          margin-left: 0.7rem;
+        }
+
+        @include breakpoint("large") {
+          &:not(:first-child) {
+            margin-left: 1rem;
+          }
+        }
+
+        a {
+          text-decoration: none;
+
+          span {
+            font-size: 1.8rem;
+
+            @include breakpoint("large") {
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__footerbottom {
+    li {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      @include breakpoint("large") {
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        // color: $white;
+        @include color-rgba($white, 0.5);
+        @include transition;
+
+        &:hover {
+          color: $primary;
+          @include transition;
+        }
+      }
+    }
+  }
+
+  &__brand {
+    li {
+      margin-bottom: 0.3rem;
+      background: $white;
+      padding: 0 1.5rem;
+
+      @include breakpoint("ipad") {
+        margin-right: 2%;
+      }
+
+      @include breakpoint("small") {
+        width: 16rem;
+      }
+
+      &:last-child {
+        @include breakpoint("ipad") {
+          margin-right: 0;
+        }
+      }
+
+      // &:first-child {
+      //   padding: 2rem;
+      // }
+
+      img {
+        width: 100%;
+      }
+
+      @include breakpoint("large") {
+        margin-bottom: 0.7rem;
+      }
+    }
+  }
+
+  &__brandtitle {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+
+    @include breakpoint("large") {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint("ipad-land") {
+      font-size: 1.6rem;
+    }
+  }
+
+  // &__footercenter {
+  //     margin-left: 3.5rem;
+
+  //     @include breakpoint ('large') {
+  //         margin-left: 5.0rem;
+  //     }
+  // }
+
+  &__copyright {
+    border-top: 0.1rem solid $grey-border;
+    padding-top: 3rem;
+    margin-top: 2rem;
+
+    @include breakpoint("large") {
+      padding-top: 4.2rem;
+      margin-top: 3.2rem;
+    }
+
+    @include breakpoint("ipad-land") {
+      margin-top: 1rem;
+      padding-top: 1rem;
+    }
+
+    p {
+      color: $gray-9;
+      font-size: 1.3rem;
+
+      @include breakpoint("large") {
+        margin: 0;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.icon {
+  background: linear-gradient(132.76deg, #351515 -3.17%, #f01a1a 96.68%);
+  padding: 2.5rem 0 0.3rem;
+
+  .eco-engine {
+    text-align: center;
+
+    color: $white;
+  }
+
+  .knowmore {
+    text-align: center;
+    padding-top: 1rem;
+    color: $white;
+    @include border-top-rgba($white, 0.48);
+    font-size: 1.4rem;
+
+    @include breakpoint("large") {
+      font-size: 2rem;
+    }
+
+    .icon-arrow {
+      font-size: 1rem;
+
+      @include breakpoint("large") {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .eco-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 2.5rem;
+  }
+}
+
+.ecoengine {
+  position: fixed;
+  bottom: 8.5rem;
+  right: 0;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  // opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  width: auto;
+  padding: 0px;
+
+  .ns-eco {
+    display: none;
+  }
+}
+
+.icon2 {
+  background-color: $black;
+  padding: 2.2rem;
+  margin: 2rem 0rem 0rem 0;
+
+  .text2 {
+    color: $white;
+    text-align: center;
+
+    @include breakpoint("large") {
+      font-size: 4.1rem;
+    }
+  }
+
+  .eco-engine1 {
+    color: $white;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+
+    @include breakpoint("large") {
+      font-size: 2rem;
+      line-height: 2.3rem;
+    }
+  }
+}
+
+.fa-instagram {
+  background: radial-gradient(
+      circle farthest-corner at 35% 90%,
+      #fec564,
+      transparent 50%
+    ),
+    radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
+    radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 20% -50%,
+      #5258cf,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%),
+    radial-gradient(
+      ellipse farthest-corner at 60% -20%,
+      #893dc2,
+      transparent 50%
+    ),
+    radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
+    linear-gradient(
+      #6559ca,
+      #bc318f 30%,
+      #e33f5f 50%,
+      #f77638 70%,
+      #fec66d 100%
+    );
+  padding-top: 6px;
+}
+
+#eco__engine.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.eco__button {
+  display: none;
+}
+
+.social-media-icons {
+  img {
+    width: 2.3rem;
+
+    @include breakpoint("large") {
+      width: 2.6rem;
+    }
+  }
+}
+
+.footersection {
+  &__inner {
+    width: 16rem;
+
+    @include breakpoint("ipad-land") {
+      width: 12rem;
+    }
+  }
+
+  &__brand {
+    @include breakpoint("ipad-land") {
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.ns-eco .icon,
+.ns-eco1 .icon2 {
+  height: 18rem;
+
+  @include breakpoint("large") {
+    height: 21.8rem;
+  }
+
+  @include breakpoint("ipad-land") {
+    height: 16rem;
+  }
+}
+
+.ns-eco1 .icon2 {
+  padding-top: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footersection {
+  &__footerbottom {
+    font-size: 1.5rem;
+
+    @include breakpoint("large") {
+      font-size: 2rem;
+    }
+
+    @include breakpoint("ipad-land") {
+      font-size: 1.4rem;
+    }
+
+    @include breakpoint("mobile") {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.footer_menu_title {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.8rem;
+  margin-top: 3rem;
+
+  @include breakpoint("ipad-land") {
+    font-size: 1.5rem;
+  }
+}
+
+.footer_menu_title:first-child {
+  margin-top: 0;
+}

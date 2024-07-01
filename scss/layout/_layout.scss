@@ -1,0 +1,25 @@
+.container {
+  // max-width: 90%;
+  max-width: $primary-container;
+  margin: 0 auto;
+
+  @include breakpoint("large") {
+    max-width: $primary-large-container;
+  }
+
+  @include breakpoint("desktop-large") {
+    max-width: $desktop-large;
+  }
+
+  @include breakpoint("desktopsmall1280") {
+    max-width: $desktopsmall1280;
+  }
+
+  @include breakpoint("ipad-land") {
+    max-width: 100%;
+  }
+
+  // @include breakpoint("desktopsmall") {
+  //   max-width: 100%;
+  // }
+}

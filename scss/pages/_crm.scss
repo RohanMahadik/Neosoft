@@ -1,0 +1,1001 @@
+.static-banner-container {
+  .blogbanner__slidercontainer {
+    .banner-desktop.banner-img {
+      @include breakpoint("ipad-land") {
+        display: none;
+      }
+    }
+  }
+}
+
+.static-banner-container {
+  .blogbanner__slidercontainer {
+    .banner-mobileimg.banner-img {
+      display: none;
+
+      @include breakpoint("ipad-land") {
+        display: block;
+      }
+    }
+  }
+}
+
+.crecosystem {
+  padding: 5rem 0;
+
+  @include breakpoint("ipad-land") {
+    padding: 3rem 2rem;
+  }
+
+  .backgroundlogo {
+    // border-top: 0.1rem solid $gray-6;
+    // border-bottom: 0.1rem solid $gray-6;
+    margin-top: 10rem;
+  }
+
+  // .border-topcrm {
+  //     border-top: 0.1rem solid $gray-6;
+  //     margin-top: 10rem;
+
+  //     @include breakpoint ('ipad-land') {
+  //         margin-top: 1rem;
+  //     }
+  // }
+
+  // .border-bottomcrm {
+  //     border-bottom: 0.1rem solid $gray-6;
+
+  // }
+
+  // .border-right {
+  //     border-right: 0.1rem solid $gray-6;
+  // }
+
+  // .border-bottommobile {
+  //     @include breakpoint ('ipad-land') {
+  //         border-bottom: 0.1rem solid $gray-6;
+  //     }
+
+  // }
+
+  // .border-leftcrm {
+  //     border-left: 0.1rem solid $gray-6;
+
+  //     @include breakpoint ('ipad-land') {
+  //         border-left: 0;
+  //     }
+  // }
+
+  // .border-leftmobile {
+  //     @include breakpoint ('ipad-land') {
+  //         border-left: 0.1rem solid $gray-6;
+  //     }
+
+  // }
+  &__logos {
+    padding: 5rem 0;
+
+    img {
+      width: 15rem;
+      height: 15rem;
+
+      @include breakpoint("ipad") {
+        width: 10rem;
+        height: 10rem;
+      }
+    }
+
+    // &:last-child {
+    //     border-right: 0.1rem solid $gray-6;
+
+    //     @include breakpoint ('ipad-land') {
+    //         border-right: 0;
+    //     }
+    // }
+  }
+}
+
+.sectioncross {
+  .techimg {
+    position: relative;
+    background-color: $black2;
+
+    &::after {
+      border-right: 0.1rem solid $gray-6;
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1px;
+      height: 100%;
+    }
+
+    &::before {
+      border-top: 0.1rem solid $gray-6;
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      z-index: 1;
+    }
+
+    @include breakpoint("min992") {
+      &:nth-child(3n)::after {
+        border-right: 0;
+      }
+    }
+
+    @include breakpoint("ipad-land") {
+      &:nth-child(2n)::after {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+.logosection {
+  border-top: 0.1rem solid $gray-6;
+  // border-bottom: 0.1rem solid $gray-6;
+
+  margin-bottom: 15rem;
+
+  @include breakpoint("ipad-land") {
+    margin-bottom: 5rem;
+  }
+
+  .techimg {
+    position: relative;
+    background-color: $black2;
+
+    &::after {
+      border-right: 0.1rem solid $gray-6;
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1px;
+      height: 100%;
+    }
+
+    &::before {
+      border-top: 0.1rem solid $gray-6;
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      z-index: 1;
+    }
+
+    @include breakpoint("min992") {
+      &:nth-child(4n)::after {
+        border-right: 0;
+      }
+    }
+
+    @include breakpoint("ipad-land") {
+      &:nth-child(2n)::after {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+.cardlist-items {
+  .containertitle {
+    h3 {
+      font-size: 2.8rem;
+
+      // @include breakpoint("desktop") {
+      //   font-size: 3rem;
+      // }
+      br {
+        @include breakpoint("ipad-land") {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.customerjorney {
+  &__mobileslider {
+    h3 {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  .bgcrm {
+    background: url("../images/solution_crm.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .bgecommerce {
+    background: url("../images/solution_ecommerce.png") no-repeat;
+    background-size: cover;
+  }
+
+  .bgrpa {
+    background: url("../images/solution_rpa.png") no-repeat;
+    background-size: cover;
+  }
+
+  .bgeerp {
+    background: url("../images/solution_erp.png") no-repeat;
+    background-size: cover;
+  }
+
+  .bgsap {
+    background: url("../images/sap_solution.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .bgcms {
+    background: url("../images/solution_cms.png") no-repeat;
+    background-size: cover;
+  }
+
+  .crdholder {
+    margin-top: 5rem;
+    margin-bottom: 0;
+    height: 100%;
+    display: flex;
+    position: relative;
+
+    .closebtncrm {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      z-index: 1;
+      filter: brightness(0) invert(1);
+      opacity: 1;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .cardlist-items {
+      &.active {
+        background: none;
+      }
+    }
+
+    @include breakpoint("ipad-land") {
+      display: none;
+    }
+
+    .flagclass {
+
+      &::after {
+        content: "";
+        width: 0.8rem;
+        height: 100%;
+        position: absolute;
+        left: calc(24% - (-0.7rem));
+        top: 0;
+        background: $black;
+        display: block;
+
+        @include breakpoint("large") {
+          left: calc(24% - (-1.1rem));
+        }
+
+        @include breakpoint("desktop") {
+          left: calc(24% - (-0.5rem));
+        }
+      }
+    }
+
+    .cardlist-items {
+      padding: 8rem 6rem 10rem;
+      width: 25%;
+      height: 60rem;
+
+      @include breakpoint("large") {
+        height: 70rem;
+      }
+
+      @include breakpoint("desktop") {
+        height: 60rem;
+      }
+
+      @include breakpoint("desktopsmall") {
+        padding: 4rem 3rem;
+      }
+    }
+
+    .containerdisplay {
+      display: block;
+      width: 100%;
+    }
+
+    .contaierinfo {
+      // display: none;
+      padding: 0 1rem;
+      position: relative;
+
+      // &::after {
+      //     content: "";
+      //     width: 0.8rem;
+      //     height: 100%;
+      //     position: absolute;
+
+      //     top: 0;
+      //     background: $black;
+      // }
+    }
+
+    .containerholder {
+      padding: 0 10rem;
+
+      ul {
+        margin-top: 3rem;
+
+        li {
+          color: $white;
+
+          position: relative;
+          padding-left: 7rem;
+          padding-right: 2rem;
+          padding-top: 0.5rem;
+          margin-bottom: 2rem;
+          font-size: 1.6rem !important;
+
+          @include breakpoint("large") {
+            font-size: 2rem !important;
+          }
+
+          @include breakpoint("ipad-land") {
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 2rem;
+          }
+
+          &::before {
+            content: "";
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: $white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            // @include breakpoint("ipad-land") {
+            //     top: -3rem;
+            //     width: 3.5rem;
+            //     height: 3.5rem;
+            // }
+          }
+
+          &::after {
+            content: "";
+            background: url("../images/tick_mark_right_white.svg") no-repeat;
+            background-size: contain;
+            width: 1.5rem;
+            position: absolute;
+            top: 1rem;
+            left: 0.9rem;
+            height: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .customerjorneymobile {
+    padding: 5rem 2rem;
+    display: none;
+
+    @include breakpoint("ipad-land") {
+      display: block;
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+
+    .customerslidercontainer {
+      &.slick-dotted.slick-slider {
+        margin-bottom: 0;
+      }
+
+      .slick-dots {
+        text-align: center;
+      }
+
+      // p {
+      //   @include breakpoint ('ipad-land') {
+      //     text-align: justify;
+      //   }
+      // }
+      .slick-dots {
+        bottom: -120px;
+        text-align: center;
+      }
+
+      .slick-prev {
+        @include breakpoint("mobile") {
+          left: -35px;
+          // display: none;
+        }
+      }
+
+      h3 {
+        @include breakpoint("small") {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .customerjorney__mobilelist {
+      margin-top: 3rem;
+
+      li {
+        color: $white;
+
+        position: relative;
+        // padding-left: 7rem;
+        // padding-right: 2rem;
+        // padding-top: 0.5rem;
+        margin-bottom: 1.6rem;
+        display: flex;
+        align-items: center;
+
+        @include breakpoint("ipad-land") {
+          margin-bottom: 3rem;
+        }
+
+        @include breakpoint("ipad") {
+          // padding-left: 5rem;
+          // padding-right: 1rem;
+          // padding-top: 0.7rem;
+          line-height: normal;
+          // margin-bottom: 1rem;
+        }
+
+        &::before {
+          content: "";
+          width: 3.5rem;
+          height: 3.5rem;
+          min-width: 3.5rem;
+          border-radius: 50%;
+          background: $white;
+          // position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 2.5rem;
+
+          @include breakpoint("small") {
+            margin-right: 1rem;
+            padding-right: 3rem;
+          }
+
+          @include breakpoint("ipad-land") {}
+        }
+
+        &::after {
+          content: "";
+          background: url("../images/tick_mark_right_white.svg") no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 1.5rem;
+          position: absolute;
+          top: 50%;
+          left: 0.9rem;
+          height: 100%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  .mobileerp {
+    background: url("../images/mobile_ERP.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .mobilecrm {
+    background: url("../images/mobile_crm.png") no-repeat;
+    background-size: cover;
+  }
+
+  .mobilerap {
+    background: url("../images/mobile_RPA.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .mobileecommerce {
+    background: url("../images/Mobile_Ecommerce.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .mobilecms {
+    background: url("../images/mobile_cms.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .mobilesap {
+    background: url("../images/mobile_SAP.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .slick-prev {
+    @include breakpoint("ipad-land") {
+      left: -3.6rem;
+    }
+
+    @include breakpoint("ipad") {
+      left: -3.5rem;
+    }
+  }
+
+  .slick-prev:before {
+    @include breakpoint("ipad-land") {
+      font-size: 3rem;
+      line-height: 0;
+    }
+
+    @include breakpoint("ipad") {
+      font-size: 3rem;
+      line-height: 1;
+    }
+  }
+
+  .slick-next:before {
+    @include breakpoint("ipad-land") {
+      font-size: 3rem;
+    }
+  }
+
+  .slick-next {
+    @include breakpoint("ipad-land") {
+      right: -3.6rem;
+    }
+
+    @include breakpoint("ipad") {
+      right: -3.5rem;
+    }
+
+    // @include breakpoint ('mobile') {
+    //   right: -4rem;
+    // }
+  }
+}
+
+
+@mixin elHover {
+  .el:hover & {
+    @content;
+  }
+}
+
+@mixin elActive {
+  .el.s--active & {
+    @content;
+  }
+}
+
+@mixin contInactive {
+  .cont.s--inactive & {
+    @content;
+  }
+}
+
+@mixin contElActive {
+  .cont.s--el-active & {
+    @content;
+  }
+}
+
+.cont {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  padding: $vertPad $sidePad;
+
+  &__inner {
+    position: relative;
+    height: 100%;
+
+    &:hover .el__bg:after {
+      opacity: 1;
+    }
+  }
+
+  @include breakpoint("ipad-land") {
+    display: none;
+  }
+}
+
+.el {
+  $elW: calc((100% - $elMrg * ($numOfEls - 1)) / $numOfEls);
+  $elMrgRel: percentage(calc($elMrg / $elW));
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: $elW;
+  height: 100%;
+  background: #252525;
+  transition: transform $moveAT $expandAT, width $expandAT, opacity $moveAT $expandAT, z-index 0s $moveAT + $expandAT;
+  will-change: transform, width, opacity;
+
+  &:not(.s--active) {
+    cursor: pointer;
+  }
+
+  &__overflow {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+  }
+
+  &__inner {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    // transition: transform $initAT;
+
+    @include contInactive {
+      // transform: translate3d(0, 100%, 0);
+    }
+  }
+
+  &__bg {
+    position: relative;
+    width: calc(100vw - #{$sidePad * 2});
+    height: 100%;
+    transition: transform $moveAT $expandAT;
+    will-change: transform;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: -5%;
+      width: 100%;
+      height: 110%;
+      background-size: cover;
+      background-position: center center;
+      transition: transform $initAT;
+      transform: translate3d(0, 0, 0) scale(1);
+
+      @include contInactive {
+        transform: translate3d(0, -100%, 0) scale(1.2);
+      }
+
+      @include elActive {
+        transition: transform $bgScaleAT;
+      }
+    }
+
+
+
+    &:after {
+      $opacityAT: 0.5s;
+
+      content: "";
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transition: opacity $opacityAT;
+
+      @include contElActive {
+        transition: opacity $opacityAT $fullExpandAT;
+        opacity: 1 !important;
+      }
+    }
+  }
+
+  &__preview-cont {
+    z-index: 2;
+    display: flex;
+    // justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s $fullInitAT - 0.2s;
+    padding: 8rem 4rem;
+
+    @include contInactive {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    @include contElActive {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.5s;
+    }
+  }
+
+  &__heading {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+
+  &__content {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.1s;
+    display: flex;
+    align-items: center;
+
+    .containerholder {
+      // padding: 0 10rem;
+
+      ul {
+        margin-top: 3rem;
+
+        li {
+          color: $white;
+
+          position: relative;
+          padding-left: 7rem;
+          padding-right: 2rem;
+          padding-top: 0.5rem;
+          margin-bottom: 2rem;
+          font-size: 1.6rem;
+
+          @include breakpoint("large") {
+            font-size: 2rem;
+          }
+
+          @include breakpoint("ipad-land") {
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 2rem;
+          }
+
+          &::before {
+            content: "";
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+            background: $white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+          }
+
+          &::after {
+            content: "";
+            background: url("../images/tick_mark_right_white.svg") no-repeat;
+            background-size: contain;
+            width: 1.5rem;
+            position: absolute;
+            top: 1rem;
+            left: 0.9rem;
+            height: 2rem;
+          }
+        }
+      }
+    }
+
+    @include elActive {
+      z-index: 2;
+      opacity: 1;
+      pointer-events: auto;
+      transition: all $contentFadeinAT $fullExpandAT;
+    }
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #fff;
+  }
+
+  &__close-btn {
+
+    z-index: -1;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0s $closeBtnAT + $closeBtnLineDelay;
+    cursor: pointer;
+
+    @include elActive {
+      z-index: 5;
+      opacity: 1;
+      pointer-events: auto;
+      transition: all 0s $fullExpandAT;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 30%;
+      height: 2px;
+      margin-top: -4px;
+      background: #fff;
+      opacity: 0;
+      transition: opacity 0s;
+      border-radius: 50px;
+
+      @include elActive {
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      transform: rotate(45deg) translateX(100%);
+
+      @include elActive {
+        transition: all $closeBtnAT $fullExpandAT cubic-bezier(.72, .09, .32, 1.57);
+        transform: rotate(45deg) translateX(0);
+      }
+    }
+
+    &:after {
+      transform: rotate(-45deg) translateX(100%);
+
+      @include elActive {
+        transition: all $closeBtnAT $fullExpandAT + $closeBtnLineDelay cubic-bezier(.72, .09, .32, 1.57);
+        transform: rotate(-45deg) translateX(0);
+      }
+    }
+  }
+
+
+
+  @for $i from 0 to $numOfEls {
+    &:nth-child(#{$i + 1}) {
+      $x: (100% + $elMrgRel) * $i;
+      transform: translate3d($x, 0, 0);
+      transform-origin: $x + 50% 50%;
+
+      @include contElActive {
+
+        &:not(.s--active) {
+          transform: scale(0.5) translate3d($x, 0, 0);
+          opacity: 0;
+          transition: transform $fadeoutAT, opacity $fadeoutAT;
+        }
+      }
+
+      .el__inner {
+        transition-delay: $initDelayStep * $i;
+
+        .el__preview-cont.containertitle {
+          h3 {
+            font-size: 2.8rem;
+          }
+        }
+      }
+
+      .el__bg {
+        transform: translate3d($elW * $i * -1, 0, 0);
+
+
+
+        .bgcrm {
+          transform: translate3d($elW * $i * -1, 0, 0);
+
+          &::before {
+            transition-delay: 0.1s * $i;
+
+
+          }
+
+        }
+
+        .bgecommerce {
+          transform: translate3d($elW * $i * -1, 0, 0);
+
+          &::before {
+            transition-delay: 0.1s * $i;
+
+          }
+
+        }
+
+        .bgrpa {
+          transform: translate3d($elW * $i * -1, 0, 0);
+
+          &::before {
+            transition-delay: 0.1s * $i;
+
+          }
+
+        }
+
+        .bgeerp {
+          transform: translate3d($elW * $i * -1, 0, 0);
+
+          &::before {
+            transition-delay: 0.1s * $i;
+
+          }
+
+        }
+
+        .bgsap {
+          transform: translate3d($elW * $i * -1, 0, 0);
+
+          &::before {
+            transition-delay: 0.1s * $i;
+
+          }
+
+        }
+
+        .bgcms {
+          transform: translate3d($elW * $i * -1, 0, 0);
+
+          &::before {
+            transition-delay: 0.1s * $i;
+
+          }
+
+        }
+      }
+
+
+
+    }
+  }
+
+  &:hover {
+
+    .el__bg:after {
+      opacity: 0;
+    }
+  }
+
+  &.s--active {
+    z-index: 1;
+    width: 100%;
+    transform: translate3d(0, 0, 0);
+    transition: transform $moveAT, width $expandAT $moveAT + $expandDelay, z-index 0s;
+
+    .el__bg {
+      transform: translate3d(0, 0, 0);
+      transition: transform $moveAT;
+
+      &:before {
+        transition-delay: $moveAT;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

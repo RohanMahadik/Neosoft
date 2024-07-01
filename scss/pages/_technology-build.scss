@@ -1,0 +1,55 @@
+.inner-wrapper{
+    width: 85%;
+    text-align: left;
+      
+    @include breakpoint("ipad") {
+        width: 100%;
+       
+    }
+}
+
+.technology__content{
+    height: 100%;
+    width: 100%;
+    background-color: $black;
+    padding: 5rem 0;
+    @include breakpoint("ipad-land") {
+        padding: 11rem 1rem;
+    }
+    .techno-content{
+        position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+
+    .techno-spacing{
+        padding: 1rem 0;
+    }
+    .techno-terms{
+        h2{
+            color: $white;
+            text-align: left;
+            font-size: 2.8rem;
+            @include breakpoint("ipad") {
+                font-size: 2rem;
+                padding-left: 0.8rem;
+            }
+        }
+
+        p{
+            color: $grey-11;
+            font-size: 1.4rem;
+            text-align: left;
+            padding-top: 1rem;
+            @include breakpoint("ipad") {
+                font-size: 1rem;
+                padding-left: 0.8rem;
+                padding-top: 0;
+            }
+        }
+    }
+}
+}
+
+
+
